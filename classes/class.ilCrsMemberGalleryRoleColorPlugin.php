@@ -17,7 +17,7 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 	/**
 	 * @return ilCrsMemberGalleryRoleColorPlugin
 	 */
-	public static function getInstance() {
+	public static function getInstance(): ilCrsMemberGalleryRoleColorPlugin {
 		if (self::$instance === NULL) {
 			self::$instance = new self();
 		}
@@ -29,7 +29,7 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 	/**
 	 * @return string
 	 */
-	public function getPluginName() {
+	public function getPluginName(): string {
 		return self::PLUGIN_NAME;
 	}
 }
