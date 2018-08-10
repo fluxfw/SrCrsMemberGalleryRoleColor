@@ -93,12 +93,12 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 						$html = str_replace('<dt>', $title_tpl_html, $html);
 					}
 
-					return array( "mode" => self::REPLACE, "html" => $html );
+					return [ "mode" => self::REPLACE, "html" => $html ];
 				}
 			}
 		}
 
-		return array( "mode" => self::KEEP, "html" => "" );
+		return [ "mode" => self::KEEP, "html" => "" ];
 	}
 
 
