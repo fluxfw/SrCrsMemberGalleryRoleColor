@@ -53,22 +53,24 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 			if ($a_par["tpl_id"] === "src/UI/templates/default/Card/tpl.card.html" && $a_part === "template_get") {
 				$html = $a_par["html"];
 
+				// Get User
 				$matches = [];
-				preg_match("/<dt>" . $this->lng->txt("username") . "<\/dt>
-	<dd>(.+)<\/dd>/", $html, $matches);
+				preg_match("/<dt>" . $this->lng->txt("username") . "<\/dt>\n\t<dd>(.+)<\/dd>/", $html, $matches);
 				if (is_array($matches) && count($matches) >= 2) {
 					$user_login = $matches[1];
 					$user_id = intval(ilObjUser::getUserIdByLogin($user_login));
 
+					// Get course
 					$course_ref_id = intval(filter_input(INPUT_GET, "ref_id"));
 					$course = new ilObjCourse($course_ref_id);
 
+					// Get role
 					$roles = $course->getMembersObject()->getAssignedRoles($user_id);
 					$role_id = current($roles);
-
 					if (!empty($role_id)) {
 						$role = ilObjRole::_getTranslation(ilObjRole::_lookupTitle($role_id));
 
+						// Role
 						$role_html_pos = stripos($html, "</dl></div>");
 						if ($role_html_pos !== false) {
 							$role_tpl = $this->pl->getTemplate("role.html");
@@ -77,14 +79,18 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 							$html = substr($html, 0, ($role_html_pos - 1)) . $role_tpl->get() . substr($html, $role_html_pos);
 						}
 
+						// Role color
 						$role_color = $this->getRoleColor($user_id, $course->getMembersObject());
-						$role_color_html_pos = stripos($html, '<div class="caption"');
-						if ($role_color_html_pos !== false) {
-							$role_color_html_pos += 20;
-							$role_color_tpl = $this->pl->getTemplate("role_color.html");
-							$role_color_tpl->setVariable("COLOR", $role_color);
-							$html = substr($html, 0, $role_color_html_pos) . $role_color_tpl->get() . substr($html, $role_color_html_pos);
-						}
+						$role_color_tpl = $this->pl->getTemplate("role_color.html");
+						$role_color_tpl->setVariable("COLOR", $role_color);
+						$role_color_tpl_html = $role_color_tpl->get();
+						$html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
+
+						// Fix title
+						//$title_tpl = $this->pl->getTemplate("title.html");
+						//$title_tpl_html = $title_tpl->get();
+						$title_tpl_html = file_get_contents($this->pl->getDirectory() . "/templates/title.html");
+						$html = str_replace('<dt>', $title_tpl_html, $html);
 					}
 
 					return array( "mode" => self::REPLACE, "html" => $html );
