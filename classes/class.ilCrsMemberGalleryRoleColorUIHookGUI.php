@@ -6,9 +6,9 @@ require_once __DIR__ . "/../vendor/autoload.php";
  */
 class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
-	const COLOR_ADMIN_BACKGROUND = "#2D373C";
-	const COLOR_ADMIN_FONT = "#FFFFFF";
-	const COLOR_TUTOR_BACKGROUND = "#A5D7D2";
+	const COLOR_ADMIN_BACKGROUND = "#A5D7D2";
+	const COLOR_ADMIN_FONT = "#000000";
+	const COLOR_TUTOR_BACKGROUND = "#D2EBE9";
 	const COLOR_TUTOR_FONT = "#000000";
 	const COLOR_MEMBER_BACKGROUND = "#FFFFFF";
 	const COLOR_MEMBER_FONT = "#000000";
