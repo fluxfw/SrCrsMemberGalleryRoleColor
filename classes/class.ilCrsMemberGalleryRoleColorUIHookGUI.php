@@ -6,9 +6,12 @@ require_once __DIR__ . "/../vendor/autoload.php";
  */
 class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
-	const COLOR_DARK_GRAY = "#808080";
-	const COLOR_LIGHT_GRAY = "#C0C0C0";
-	const COLOR_WHITE = "#ffffff";
+	const COLOR_ADMIN_BACKGROUND = "#2D373C";
+	const COLOR_ADMIN_FONT = "#FFFFFF";
+	const COLOR_TUTOR_BACKGROUND = "#A5D7D2";
+	const COLOR_TUTOR_FONT = "#000000";
+	const COLOR_MEMBER_BACKGROUND = "#FFFFFF";
+	const COLOR_MEMBER_FONT = "#000000";
 	/**
 	 * @var ilCtrl
 	 */
@@ -80,9 +83,11 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 						}
 
 						// Role color
-						$role_color = $this->getRoleColor($user_id, $course->getMembersObject());
+						$role_color_background = $this->getRoleColorBackground($user_id, $course->getMembersObject());
+						$role_color_font = $this->getRoleColorFont($user_id, $course->getMembersObject());
 						$role_color_tpl = $this->pl->getTemplate("role_color.html");
-						$role_color_tpl->setVariable("COLOR", $role_color);
+						$role_color_tpl->setVariable("BACKGROUND_COLOR", $role_color_background);
+						$role_color_tpl->setVariable("FONT_COLOR", $role_color_font);
 						$role_color_tpl_html = $role_color_tpl->get();
 						$html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
 
@@ -108,19 +113,45 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 	 *
 	 * @return string
 	 */
-	protected function getRoleColor(int $user_id, ilCourseParticipants $members): string {
+	protected function getRoleColorBackground(int $user_id, ilCourseParticipants $members): string {
 		switch (true) {
 			case $members->isAdmin($user_id):
-				$color = self::COLOR_DARK_GRAY;
+				$color = self::COLOR_ADMIN_BACKGROUND;
 				break;
 
 			case $members->isTutor($user_id):
-				$color = self::COLOR_LIGHT_GRAY;
+				$color = self::COLOR_TUTOR_BACKGROUND;
 				break;
 
 			case $members->isMember($user_id):
 			default:
-				$color = self::COLOR_WHITE;
+				$color = self::COLOR_MEMBER_BACKGROUND;
+				break;
+		}
+
+		return $color;
+	}
+
+
+	/**
+	 * @param int                  $user_id
+	 * @param ilCourseParticipants $members
+	 *
+	 * @return string
+	 */
+	protected function getRoleColorFont(int $user_id, ilCourseParticipants $members): string {
+		switch (true) {
+			case $members->isAdmin($user_id):
+				$color = self::COLOR_ADMIN_FONT;
+				break;
+
+			case $members->isTutor($user_id):
+				$color = self::COLOR_TUTOR_FONT;
+				break;
+
+			case $members->isMember($user_id):
+			default:
+				$color = self::COLOR_MEMBER_FONT;
 				break;
 		}
 
