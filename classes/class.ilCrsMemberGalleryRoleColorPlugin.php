@@ -34,4 +34,12 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 	public function getPluginName(): string {
 		return self::PLUGIN_NAME;
 	}
+
+
+	/**
+	 * @return bool
+	 */
+	protected function beforeUninstall(): bool {
+		return true;
+	}
 }
