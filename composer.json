@@ -4,6 +4,9 @@
       "classes/"
     ]
   },
+  "require": {
+    "srag/dic": "dev-master"
+  },
   "config": {
     "optimize-autoloader": true,
     "sort-packages": true,
