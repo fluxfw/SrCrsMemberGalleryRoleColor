@@ -1,11 +1,11 @@
 {
+  "require": {
+    "srag/dic": "dev-master"
+  },
   "autoload": {
     "classmap": [
       "classes/"
     ]
-  },
-  "require": {
-    "srag/dic": "dev-master"
   },
   "config": {
     "optimize-autoloader": true,
