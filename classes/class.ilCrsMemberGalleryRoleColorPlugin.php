@@ -11,15 +11,15 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 	const PLUGIN_ID = "crsmgrc";
 	const PLUGIN_NAME = "CrsMemberGalleryRoleColor";
 	/**
-	 * @var ilCrsMemberGalleryRoleColorPlugin
+	 * @var self
 	 */
 	protected static $instance = NULL;
 
 
 	/**
-	 * @return ilCrsMemberGalleryRoleColorPlugin
+	 * @return self
 	 */
-	public static function getInstance(): ilCrsMemberGalleryRoleColorPlugin {
+	public static function getInstance(): self {
 		if (self::$instance === NULL) {
 			self::$instance = new self();
 		}
