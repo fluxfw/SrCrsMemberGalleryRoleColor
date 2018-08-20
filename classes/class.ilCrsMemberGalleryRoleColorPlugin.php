@@ -5,7 +5,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 use srag\DIC\DICTrait;
 
 /**
- * CrsMemberGalleryRoleColor Plugin
+ * Class ilCrsMemberGalleryRoleColorPlugin
  */
 class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
@@ -28,6 +28,14 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 		}
 
 		return self::$instance;
+	}
+
+
+	/**
+	 * ilCrsMemberGalleryRoleColorPlugin constructor
+	 */
+	public function __construct() {
+		parent::__construct();
 	}
 
 

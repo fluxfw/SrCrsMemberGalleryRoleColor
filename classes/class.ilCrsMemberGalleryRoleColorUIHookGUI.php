@@ -5,7 +5,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 use srag\DIC\DICTrait;
 
 /**
- * CrsMemberGalleryRoleColor UIHook-GUI
+ * Class ilCrsMemberGalleryRoleColorUIHookGUI
  */
 class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
@@ -20,7 +20,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 
 	/**
-	 *
+	 * ilCrsMemberGalleryRoleColorUIHookGUI constructor
 	 */
 	public function __construct() {
 
