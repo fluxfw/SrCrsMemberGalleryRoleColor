@@ -1,12 +1,15 @@
 <?php
+
 require_once __DIR__ . "/../vendor/autoload.php";
+
+use srag\DIC\DICTrait;
 
 /**
  * CrsMemberGalleryRoleColor UIHook-GUI
  */
 class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
-	use srag\DIC\DICTrait;
+	use DICTrait;
 	const PLUGIN_CLASS_NAME = ilCrsMemberGalleryRoleColorPlugin::class;
 	const COLOR_ADMIN_BACKGROUND = "#A5D7D2";
 	const COLOR_ADMIN_FONT = "#000000";
