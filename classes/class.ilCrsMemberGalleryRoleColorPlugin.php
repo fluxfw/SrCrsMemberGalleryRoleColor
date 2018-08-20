@@ -11,7 +11,7 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 	const PLUGIN_ID = "crsmgrc";
 	const PLUGIN_NAME = "CrsMemberGalleryRoleColor";
 	/**
-	 * @var self
+	 * @var self|null
 	 */
 	protected static $instance = NULL;
 
