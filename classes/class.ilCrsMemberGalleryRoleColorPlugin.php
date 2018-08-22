@@ -10,9 +10,9 @@ use srag\DIC\DICTrait;
 class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
 	use DICTrait;
-	const PLUGIN_CLASS_NAME = self::class;
 	const PLUGIN_ID = "crsmgrc";
 	const PLUGIN_NAME = "CrsMemberGalleryRoleColor";
+	const PLUGIN_CLASS_NAME = self::class;
 	/**
 	 * @var self|null
 	 */
