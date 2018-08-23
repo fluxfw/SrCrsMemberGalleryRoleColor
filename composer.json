@@ -3,6 +3,9 @@
     "srag/dic": "^0.2.1"
   },
   "autoload": {
+    "psr-4": {
+      "srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\": "src/"
+    },
     "classmap": [
       "classes/"
     ]

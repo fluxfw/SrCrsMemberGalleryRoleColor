@@ -4,16 +4,21 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit221b156267a972b6c51895ccb7bc5674
+class ComposerStaticInitfa6928892c493265d36bf7dc3ba821ca
 {
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
+            'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\' => 46,
             'srag\\DIC\\' => 9,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
@@ -35,9 +40,9 @@ class ComposerStaticInit221b156267a972b6c51895ccb7bc5674
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit221b156267a972b6c51895ccb7bc5674::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit221b156267a972b6c51895ccb7bc5674::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit221b156267a972b6c51895ccb7bc5674::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitfa6928892c493265d36bf7dc3ba821ca::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitfa6928892c493265d36bf7dc3ba821ca::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitfa6928892c493265d36bf7dc3ba821ca::$classMap;
 
         }, null, ClassLoader::class);
     }
