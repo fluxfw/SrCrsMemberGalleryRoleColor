@@ -1,6 +1,6 @@
 {
   "require": {
-    "srag/dic": "^0.2.1"
+    "srag/dic": "^0.2.2"
   },
   "autoload": {
     "psr-4": {
