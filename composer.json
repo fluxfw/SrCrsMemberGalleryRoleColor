@@ -1,5 +1,6 @@
 {
   "require": {
+    "php": "^7.0",
     "srag/dic": "^0.2.3"
   },
   "autoload": {
