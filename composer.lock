@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "131136ca570af14828ab01259dbcf23f",
+    "content-hash": "0b8e3c274e2abbbb03cba7fc4c497319",
     "packages": [
         {
             "name": "srag/dic",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/DIC.git",
-                "reference": "01a7b20792fc6c49ed60aabda8027548b7aabb02"
+                "reference": "add33e5c5cc3a8ea7bf433719f320d8910d71bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/01a7b20792fc6c49ed60aabda8027548b7aabb02",
-                "reference": "01a7b20792fc6c49ed60aabda8027548b7aabb02",
+                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/add33e5c5cc3a8ea7bf433719f320d8910d71bc2",
+                "reference": "add33e5c5cc3a8ea7bf433719f320d8910d71bc2",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "globals",
                 "trait"
             ],
-            "time": "2018-08-28T08:56:11+00:00"
+            "time": "2018-08-28T09:49:32+00:00"
         }
     ],
     "packages-dev": [],
