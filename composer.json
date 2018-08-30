@@ -23,7 +23,7 @@
   },
   "require": {
     "php": "^7.0",
-    "srag/dic": "^0.4.0"
+    "srag/dic": "^0.5.1"
   },
   "autoload": {
     "psr-4": {
