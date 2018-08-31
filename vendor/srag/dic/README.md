@@ -1,22 +1,12 @@
 Use all ILIAS globals in your class
 
-### Install
-For development you should install this library like follow:
-
-Start at your ILIAS root directory 
-```bash
-mkdir -p Customizing/global/plugins/Libraries/  
-cd Customizing/global/plugins/Libraries/  
-git clone git@git.studer-raimann.ch:ILIAS/Plugins/DIC.git DIC
-```
-
 ### Usage
 
 #### Composer
 First add the follow to your `composer.json` file:
 ```json
 "require": {
-  "srag/dic": "^0.4.0"
+  "srag/dic": ">=0.1.0"
 },
 ```
 And run a `composer install`.
@@ -80,13 +70,13 @@ For plugin dir use:
 self::directory();
 ```
 
-For Output html use:
+For output html use:
 ```php
 /**
  * Output html
  * 
- * @param string|ilTemplate $html HTML code or ilTemplate instance
- * @param bool              $main Display main skin?
+ * @param string|ilTemplate|ilConfirmationGUI|ilPropertyFormGUI $html HTML code or ilTemplate instance
+ * @param bool                                                  $main Display main skin?
  */
 self::output($html, $main = true);
 ```
@@ -123,12 +113,11 @@ For translate use:
 self::translate($key, $module = "", $placeholders = [], $plugin = true, $lang = "", $default = "MISSING %s");
 ```
 
-Should you get an exception like `Warning: sprintf(): Too few arguments`, please use the placeholders feature and not direct `sprintf` in your code.
-
 If you really need DICTrait outside a class (For instance in `dbupdate.php`), use `DICStatic::dic()`
 
 #### Clean up
 You can now remove all usages of ILIAS globals in your class and replace it with this library.
+Please avoid to store in variables or class variables.
 
 #### Other tips
 - Use `__DIR__`
@@ -145,3 +134,13 @@ This library should works with every ILIAS version provided the features are sup
 * Adjustment suggestions which are not yet worked out in detail by Jira tasks under https://jira.studer-raimann.ch/projects/LDIC
 * Bug reports under https://jira.studer-raimann.ch/projects/LDIC
 * For external developers please send an email to support-custom1@studer-raimann.ch
+
+### Development
+If you want development in this library you should install this library like follow:
+
+Start at your ILIAS root directory 
+```bash
+mkdir -p Customizing/global/plugins/Libraries/  
+cd Customizing/global/plugins/Libraries/  
+git clone git@git.studer-raimann.ch:ILIAS/Plugins/DIC.git DIC
+```

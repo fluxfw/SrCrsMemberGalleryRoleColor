@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b8e3c274e2abbbb03cba7fc4c497319",
+    "content-hash": "561aafcac3469e7ebaea816c759e142d",
     "packages": [
         {
             "name": "srag/dic",
-            "version": "0.4.0",
+            "version": "0.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/DIC.git",
-                "reference": "add33e5c5cc3a8ea7bf433719f320d8910d71bc2"
+                "reference": "737a89502d8c9b6681ad3dd54fc21898f2c60431"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/add33e5c5cc3a8ea7bf433719f320d8910d71bc2",
-                "reference": "add33e5c5cc3a8ea7bf433719f320d8910d71bc2",
+                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/737a89502d8c9b6681ad3dd54fc21898f2c60431",
+                "reference": "737a89502d8c9b6681ad3dd54fc21898f2c60431",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": ">=5.6"
             },
             "type": "library",
             "autoload": {
@@ -49,7 +49,7 @@
                 "globals",
                 "trait"
             ],
-            "time": "2018-08-28T09:49:32+00:00"
+            "time": "2018-08-31T10:42:21+00:00"
         }
     ],
     "packages-dev": [],
@@ -59,7 +59,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0"
+        "php": ">=7.0"
     },
     "platform-dev": []
 }
