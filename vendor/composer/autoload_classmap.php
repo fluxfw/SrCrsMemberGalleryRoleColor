@@ -9,7 +9,6 @@ return array(
     'ilCrsMemberGalleryRoleColorPlugin' => $baseDir . '/classes/class.ilCrsMemberGalleryRoleColorPlugin.php',
     'ilCrsMemberGalleryRoleColorUIHookGUI' => $baseDir . '/classes/class.ilCrsMemberGalleryRoleColorUIHookGUI.php',
     'srag\\DIC\\AbstractDIC' => $vendorDir . '/srag/dic/src/AbstractDIC.php',
-    'srag\\DIC\\DICCache' => $vendorDir . '/srag/dic/src/DICCache.php',
     'srag\\DIC\\DICException' => $vendorDir . '/srag/dic/src/DICException.php',
     'srag\\DIC\\DICInterface' => $vendorDir . '/srag/dic/src/DICInterface.php',
     'srag\\DIC\\DICStatic' => $vendorDir . '/srag/dic/src/DICStatic.php',
