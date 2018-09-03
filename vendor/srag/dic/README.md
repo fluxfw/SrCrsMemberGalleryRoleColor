@@ -59,7 +59,7 @@ You can access the plugin class:
  *
  * @throws DICException
  */
-self::pl();
+self::plugin()->getPluginObject();
 ```
 
 For plugin dir use:
@@ -69,7 +69,7 @@ For plugin dir use:
  * 
  * @return string Plugin directory
  */
-self::directory();
+self::plugin()->directory();
 ```
 
 For output html use:
@@ -82,7 +82,7 @@ For output html use:
  *
  * @throws DICException
  */
-self::output($html, $main = true);
+self::plugin()->output($html, $main = true);
 ```
 
 For get a template use:
@@ -99,7 +99,7 @@ For get a template use:
  *
  * @throws DICException
  */
-self::template($template, $remove_unknown_variables = true, $remove_empty_blocks = true, $plugin = true);
+self::plugin()->template($template, $remove_unknown_variables = true, $remove_empty_blocks = true, $plugin = true);
 ```
 
 For translate use:
@@ -118,7 +118,7 @@ For translate use:
  *
  * @throws DICException
  */
-self::translate($key, $module = "", $placeholders = [], $plugin = true, $lang = "", $default = "MISSING %s");
+self::plugin()->translate($key, $module = "", $placeholders = [], $plugin = true, $lang = "", $default = "MISSING %s");
 ```
 
 If you really need DICTrait outside a class (For instance in `dbupdate.php`), use `DICStatic::dic()`.

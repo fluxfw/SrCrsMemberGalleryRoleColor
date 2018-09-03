@@ -42,7 +42,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 				// Get User
 				$matches = [];
-				preg_match("/<dt>" . self::translate("username", "", [], false) . "<\/dt>\n\t<dd>(.+)<\/dd>/", $html, $matches);
+				preg_match("/<dt>" . self::plugin()->translate("username", "", [], false) . "<\/dt>\n\t<dd>(.+)<\/dd>/", $html, $matches);
 				if (is_array($matches) && count($matches) >= 2) {
 					$user_login = $matches[1];
 					$user_id = intval(ilObjUser::getUserIdByLogin($user_login));
@@ -60,8 +60,8 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 						// Role
 						$role_html_pos = stripos($html, "</dl></div>");
 						if ($role_html_pos !== false) {
-							$role_tpl = self::template("role.html");
-							$role_tpl->setVariable("ROLE_TITLE", self::translate("role"));
+							$role_tpl = self::plugin()->template("role.html");
+							$role_tpl->setVariable("ROLE_TITLE", self::plugin()->translate("role"));
 							$role_tpl->setVariable("ROLE", $role);
 							$html = substr($html, 0, ($role_html_pos - 1)) . $role_tpl->get() . substr($html, $role_html_pos);
 						}
@@ -69,16 +69,16 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 						// Role color
 						$role_color_background = $this->getRoleColorBackground($user_id, $course->getMembersObject());
 						$role_color_font = $this->getRoleColorFont($user_id, $course->getMembersObject());
-						$role_color_tpl = self::template("role_color.html");
+						$role_color_tpl = self::plugin()->template("role_color.html");
 						$role_color_tpl->setVariable("BACKGROUND_COLOR", $role_color_background);
 						$role_color_tpl->setVariable("FONT_COLOR", $role_color_font);
 						$role_color_tpl_html = $role_color_tpl->get();
 						$html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
 
 						// Fix title
-						//$title_tpl =self::template("title.html");
+						//$title_tpl =self::plugin()->template("title.html");
 						//$title_tpl_html = $title_tpl->get();
-						$title_tpl_html = file_get_contents(self::directory() . "/templates/title.html");
+						$title_tpl_html = file_get_contents(self::plugin()->directory() . "/templates/title.html");
 						$html = str_replace('<dt>', $title_tpl_html, $html);
 					}
 
