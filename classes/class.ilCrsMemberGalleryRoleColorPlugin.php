@@ -2,17 +2,19 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\DICTrait;
+use srag\RemovePluginDataConfirm\PluginUninstallTrait;
 
 /**
  * Class ilCrsMemberGalleryRoleColorPlugin
  */
 class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
-	use DICTrait;
+	use PluginUninstallTrait;
 	const PLUGIN_ID = "crsmgrc";
 	const PLUGIN_NAME = "CrsMemberGalleryRoleColor";
 	const PLUGIN_CLASS_NAME = self::class;
+	const REMOVE_PLUGIN_DATA_CONFIRM = false;
+	const REMOVE_PLUGIN_DATA_CONFIRM_CLASS_NAME = CrsMemberGalleryRoleColorConfirm::class;
 	/**
 	 * @var self|null
 	 */
@@ -48,9 +50,9 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
 
 	/**
-	 * @return bool
+	 * @inheritdoc
 	 */
-	protected function beforeUninstall(): bool {
-		return true;
+	protected function deleteData() {
+		// Nothing to delete
 	}
 }
