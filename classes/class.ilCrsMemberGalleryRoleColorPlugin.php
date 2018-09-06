@@ -52,7 +52,7 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 	/**
 	 * @inheritdoc
 	 */
-	protected function deleteData() {
+	protected function deleteData()/*: void*/ {
 		// Nothing to delete
 	}
 }

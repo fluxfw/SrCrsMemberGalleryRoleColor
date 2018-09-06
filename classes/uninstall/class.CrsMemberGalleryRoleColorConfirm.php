@@ -17,7 +17,7 @@ class CrsMemberGalleryRoleColorConfirm extends AbstractRemovePluginDataConfirm {
 	/**
 	 * @inheritdoc
 	 */
-	public function removeUninstallRemovesData() {
+	public function getUninstallRemovesData()/*: ?bool*/ {
 		// TODO:
 	}
 
@@ -25,7 +25,8 @@ class CrsMemberGalleryRoleColorConfirm extends AbstractRemovePluginDataConfirm {
 	/**
 	 * @inheritdoc
 	 */
-	public function getUninstallRemovesData() {
+	public function setUninstallRemovesData(/*bool*/
+		$uninstall_removes_data)/*: void*/ {
 		// TODO:
 	}
 
@@ -33,7 +34,7 @@ class CrsMemberGalleryRoleColorConfirm extends AbstractRemovePluginDataConfirm {
 	/**
 	 * @inheritdoc
 	 */
-	public function setUninstallRemovesData($uninstall_removes_data) {
+	public function removeUninstallRemovesData()/*: void*/ {
 		// TODO:
 	}
 }
