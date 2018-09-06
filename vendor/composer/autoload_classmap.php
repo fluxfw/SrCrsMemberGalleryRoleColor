@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CrsMemberGalleryRoleColorConfirm' => $baseDir . '/classes/uninstall/class.CrsMemberGalleryRoleColorConfirm.php',
     'ilCrsMemberGalleryRoleColorPlugin' => $baseDir . '/classes/class.ilCrsMemberGalleryRoleColorPlugin.php',
     'ilCrsMemberGalleryRoleColorUIHookGUI' => $baseDir . '/classes/class.ilCrsMemberGalleryRoleColorUIHookGUI.php',
     'srag\\DIC\\DICStatic' => $vendorDir . '/srag/dic/src/DICStatic.php',
@@ -18,4 +19,9 @@ return array(
     'srag\\DIC\\Exception\\DICException' => $vendorDir . '/srag/dic/src/Exception/DICException.php',
     'srag\\DIC\\Plugin\\Plugin' => $vendorDir . '/srag/dic/src/Plugin/Plugin.php',
     'srag\\DIC\\Plugin\\PluginInterface' => $vendorDir . '/srag/dic/src/Plugin/PluginInterface.php',
+    'srag\\RemovePluginDataConfirm\\AbstractPluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/AbstractPluginUninstallTrait.php',
+    'srag\\RemovePluginDataConfirm\\AbstractRemovePluginDataConfirm' => $vendorDir . '/srag/removeplugindataconfirm/src/AbstractRemovePluginDataConfirm.php',
+    'srag\\RemovePluginDataConfirm\\PluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
+    'srag\\RemovePluginDataConfirm\\RemovePluginDataConfirmException' => $vendorDir . '/srag/removeplugindataconfirm/src/RemovePluginDataConfirmException.php',
+    'srag\\RemovePluginDataConfirm\\RepositoryObjectPluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/RepositoryObjectPluginUninstallTrait.php',
 );

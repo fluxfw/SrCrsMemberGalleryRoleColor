@@ -10,6 +10,7 @@ class ComposerStaticInit62a96a7165ea031030464a508070b7d8
         's' => 
         array (
             'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\' => 46,
+            'srag\\RemovePluginDataConfirm\\' => 29,
             'srag\\DIC\\' => 9,
         ),
     );
@@ -19,6 +20,10 @@ class ComposerStaticInit62a96a7165ea031030464a508070b7d8
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'srag\\RemovePluginDataConfirm\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
+        ),
         'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
@@ -26,6 +31,7 @@ class ComposerStaticInit62a96a7165ea031030464a508070b7d8
     );
 
     public static $classMap = array (
+        'CrsMemberGalleryRoleColorConfirm' => __DIR__ . '/../..' . '/classes/uninstall/class.CrsMemberGalleryRoleColorConfirm.php',
         'ilCrsMemberGalleryRoleColorPlugin' => __DIR__ . '/../..' . '/classes/class.ilCrsMemberGalleryRoleColorPlugin.php',
         'ilCrsMemberGalleryRoleColorUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilCrsMemberGalleryRoleColorUIHookGUI.php',
         'srag\\DIC\\DICStatic' => __DIR__ . '/..' . '/srag/dic/src/DICStatic.php',
@@ -38,6 +44,11 @@ class ComposerStaticInit62a96a7165ea031030464a508070b7d8
         'srag\\DIC\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
         'srag\\DIC\\Plugin\\Plugin' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Plugin.php',
         'srag\\DIC\\Plugin\\PluginInterface' => __DIR__ . '/..' . '/srag/dic/src/Plugin/PluginInterface.php',
+        'srag\\RemovePluginDataConfirm\\AbstractPluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/AbstractPluginUninstallTrait.php',
+        'srag\\RemovePluginDataConfirm\\AbstractRemovePluginDataConfirm' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/AbstractRemovePluginDataConfirm.php',
+        'srag\\RemovePluginDataConfirm\\PluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
+        'srag\\RemovePluginDataConfirm\\RemovePluginDataConfirmException' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/RemovePluginDataConfirmException.php',
+        'srag\\RemovePluginDataConfirm\\RepositoryObjectPluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/RepositoryObjectPluginUninstallTrait.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
