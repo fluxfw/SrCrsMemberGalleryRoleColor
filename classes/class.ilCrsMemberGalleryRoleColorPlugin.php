@@ -6,6 +6,8 @@ use srag\RemovePluginDataConfirm\PluginUninstallTrait;
 
 /**
  * Class ilCrsMemberGalleryRoleColorPlugin
+ *
+ * @author studer + raimann ag <support-custom1@studer-raimann.ch>
  */
 class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 

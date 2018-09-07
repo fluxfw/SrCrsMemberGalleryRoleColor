@@ -7,6 +7,8 @@ use srag\RemovePluginDataConfirm\AbstractRemovePluginDataConfirm;
 /**
  * Class CrsMemberGalleryRoleColorConfirm
  *
+ * @author            studer + raimann ag <support-custom1@studer-raimann.ch>
+ *
  * @ilCtrl_isCalledBy CrsMemberGalleryRoleColorConfirm: ilUIPluginRouterGUI
  */
 class CrsMemberGalleryRoleColorConfirm extends AbstractRemovePluginDataConfirm {
