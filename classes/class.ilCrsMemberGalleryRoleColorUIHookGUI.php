@@ -6,6 +6,8 @@ use srag\DIC\DICTrait;
 
 /**
  * Class ilCrsMemberGalleryRoleColorUIHookGUI
+ *
+ * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
@@ -34,7 +36,10 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 	 *
 	 * @return array
 	 */
-	public function getHTML($a_comp, $a_part, $a_par = []): array {
+	public function getHTML(/*string*/
+		$a_comp, /*string*/
+		$a_part, /*array*/
+		$a_par = []): array {
 		if (self::dic()->ctrl()->getCmdClass() === strtolower(ilUsersGalleryGUI::class)
 			&& (empty(self::dic()->ctrl()->getCmd()) || self::dic()->ctrl()->getCmd() === "view")) {
 			if ($a_par["tpl_id"] === "src/UI/templates/default/Card/tpl.card.html" && $a_part === "template_get") {
