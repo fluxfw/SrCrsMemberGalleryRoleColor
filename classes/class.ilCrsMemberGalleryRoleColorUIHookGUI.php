@@ -19,6 +19,8 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 	const COLOR_TUTOR_FONT = "#000000";
 	const COLOR_MEMBER_BACKGROUND = "#FFFFFF";
 	const COLOR_MEMBER_FONT = "#000000";
+	const CARD_TEMPLATE_ID = "src/UI/templates/default/Card/tpl.card.html";
+	const TEMPLATE_GET = "template_get";
 
 
 	/**
@@ -42,7 +44,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 		$a_par = []): array {
 		if (self::dic()->ctrl()->getCmdClass() === strtolower(ilUsersGalleryGUI::class)
 			&& (empty(self::dic()->ctrl()->getCmd()) || self::dic()->ctrl()->getCmd() === "view")) {
-			if ($a_par["tpl_id"] === "src/UI/templates/default/Card/tpl.card.html" && $a_part === "template_get") {
+			if ($a_par["tpl_id"] === self::CARD_TEMPLATE_ID && $a_part === self::TEMPLATE_GET) {
 				$html = $a_par["html"];
 
 				// Get User
