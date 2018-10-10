@@ -10,7 +10,7 @@ git clone git@git.studer-raimann.ch:ILIAS/Kunden/UNIBAS/CrsMemberGalleryRoleColo
 Update, activate and config the plugin in the ILIAS Plugin Administration
 
 ### Dependencies
-* PHP 7.0
+* PHP >=7.0
 * [composer](https://getcomposer.org)
 * [srag/dic](https://packagist.org/packages/srag/dic)
 * [srag/removeplugindataconfirm](https://packagist.org/packages/srag/removeplugindataconfirm)
