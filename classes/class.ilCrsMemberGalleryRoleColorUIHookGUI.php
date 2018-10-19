@@ -21,6 +21,11 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 	const COLOR_MEMBER_FONT = "#000000";
 	const CARD_TEMPLATE_ID = "src/UI/templates/default/Card/tpl.card.html";
 	const TEMPLATE_GET = "template_get";
+	const INIT = "init";
+	/**
+	 * @var bool[]
+	 */
+	protected static $load = [];
 
 
 	/**
@@ -42,54 +47,61 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 		$a_comp, /*string*/
 		$a_part, /*array*/
 		$a_par = []): array {
-		if (self::dic()->ctrl()->getCmdClass() === strtolower(ilUsersGalleryGUI::class)
-			&& (empty(self::dic()->ctrl()->getCmd()) || self::dic()->ctrl()->getCmd() === "view")) {
-			if ($a_par["tpl_id"] === self::CARD_TEMPLATE_ID && $a_part === self::TEMPLATE_GET) {
-				$html = $a_par["html"];
+		if (!self::$load[self::INIT]) {
 
-				// Get User
-				$matches = [];
-				preg_match("/<dt>" . self::plugin()->translate("username", "", [], false) . "<\/dt>\n\t<dd>(.+)<\/dd>/", $html, $matches);
-				if (is_array($matches) && count($matches) >= 2) {
-					$user_login = $matches[1];
-					$user_id = intval(ilObjUser::getUserIdByLogin($user_login));
+			if (self::dic()->ctrl()->getCmdClass() === strtolower(ilUsersGalleryGUI::class)
+				&& (empty(self::dic()->ctrl()->getCmd()) || self::dic()->ctrl()->getCmd() === "view")) {
 
-					// Get course
-					$course_ref_id = intval(filter_input(INPUT_GET, "ref_id"));
-					$course = new ilObjCourse($course_ref_id);
+				if ($a_par["tpl_id"] === self::CARD_TEMPLATE_ID && $a_part === self::TEMPLATE_GET) {
 
-					// Get role
-					$roles = $course->getMembersObject()->getAssignedRoles($user_id);
-					$role_id = current($roles);
-					if (!empty($role_id)) {
-						$role = ilObjRole::_getTranslation(ilObjRole::_lookupTitle($role_id));
+					self::$load[self::INIT] = true;
 
-						// Role
-						$role_html_pos = stripos($html, "</dl></div>");
-						if ($role_html_pos !== false) {
-							$role_tpl = self::plugin()->template("role.html");
-							$role_tpl->setVariable("ROLE_TITLE", self::plugin()->translate("role"));
-							$role_tpl->setVariable("ROLE", $role);
-							$html = substr($html, 0, ($role_html_pos - 1)) . $role_tpl->get() . substr($html, $role_html_pos);
+					$html = $a_par["html"];
+
+					// Get User
+					$matches = [];
+					preg_match("/<dt>" . self::plugin()->translate("username", "", [], false) . "<\/dt>\n\t<dd>(.+)<\/dd>/", $html, $matches);
+					if (is_array($matches) && count($matches) >= 2) {
+						$user_login = $matches[1];
+						$user_id = intval(ilObjUser::getUserIdByLogin($user_login));
+
+						// Get course
+						$course_ref_id = intval(filter_input(INPUT_GET, "ref_id"));
+						$course = new ilObjCourse($course_ref_id);
+
+						// Get role
+						$roles = $course->getMembersObject()->getAssignedRoles($user_id);
+						$role_id = current($roles);
+						if (!empty($role_id)) {
+							$role = ilObjRole::_getTranslation(ilObjRole::_lookupTitle($role_id));
+
+							// Role
+							$role_html_pos = stripos($html, "</dl></div>");
+							if ($role_html_pos !== false) {
+								$role_tpl = self::plugin()->template("role.html");
+								$role_tpl->setVariable("ROLE_TITLE", self::plugin()->translate("role"));
+								$role_tpl->setVariable("ROLE", $role);
+								$html = substr($html, 0, ($role_html_pos - 1)) . $role_tpl->get() . substr($html, $role_html_pos);
+							}
+
+							// Role color
+							$role_color_background = $this->getRoleColorBackground($user_id, $course->getMembersObject());
+							$role_color_font = $this->getRoleColorFont($user_id, $course->getMembersObject());
+							$role_color_tpl = self::plugin()->template("role_color.html");
+							$role_color_tpl->setVariable("BACKGROUND_COLOR", $role_color_background);
+							$role_color_tpl->setVariable("FONT_COLOR", $role_color_font);
+							$role_color_tpl_html = $role_color_tpl->get();
+							$html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
+
+							// Fix title
+							//$title_tpl =self::plugin()->template("title.html");
+							//$title_tpl_html = $title_tpl->get();
+							$title_tpl_html = file_get_contents(self::plugin()->directory() . "/templates/title.html");
+							$html = str_replace('<dt>', $title_tpl_html, $html);
 						}
 
-						// Role color
-						$role_color_background = $this->getRoleColorBackground($user_id, $course->getMembersObject());
-						$role_color_font = $this->getRoleColorFont($user_id, $course->getMembersObject());
-						$role_color_tpl = self::plugin()->template("role_color.html");
-						$role_color_tpl->setVariable("BACKGROUND_COLOR", $role_color_background);
-						$role_color_tpl->setVariable("FONT_COLOR", $role_color_font);
-						$role_color_tpl_html = $role_color_tpl->get();
-						$html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
-
-						// Fix title
-						//$title_tpl =self::plugin()->template("title.html");
-						//$title_tpl_html = $title_tpl->get();
-						$title_tpl_html = file_get_contents(self::plugin()->directory() . "/templates/title.html");
-						$html = str_replace('<dt>', $title_tpl_html, $html);
+						return [ "mode" => self::REPLACE, "html" => $html ];
 					}
-
-					return [ "mode" => self::REPLACE, "html" => $html ];
 				}
 			}
 		}
