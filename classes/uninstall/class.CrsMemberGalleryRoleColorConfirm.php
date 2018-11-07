@@ -14,29 +14,4 @@ use srag\RemovePluginDataConfirm\AbstractRemovePluginDataConfirm;
 class CrsMemberGalleryRoleColorConfirm extends AbstractRemovePluginDataConfirm {
 
 	const PLUGIN_CLASS_NAME = ilCrsMemberGalleryRoleColorPlugin::class;
-
-
-	/**
-	 * @inheritdoc
-	 */
-	public function getUninstallRemovesData()/*: ?bool*/ {
-		// TODO:
-	}
-
-
-	/**
-	 * @inheritdoc
-	 */
-	public function setUninstallRemovesData(/*bool*/
-		$uninstall_removes_data)/*: void*/ {
-		// TODO:
-	}
-
-
-	/**
-	 * @inheritdoc
-	 */
-	public function removeUninstallRemovesData()/*: void*/ {
-		// TODO:
-	}
 }
