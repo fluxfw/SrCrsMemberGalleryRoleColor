@@ -3,6 +3,7 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\RemovePluginDataConfirm\PluginUninstallTrait;
+use srag\UNIBAS\Plugins\CrsMemberGalleryRoleColor\Utils\CrsMemberGalleryRoleColorTrait;
 
 /**
  * Class ilCrsMemberGalleryRoleColorPlugin
@@ -12,6 +13,7 @@ use srag\RemovePluginDataConfirm\PluginUninstallTrait;
 class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
 	use PluginUninstallTrait;
+	use CrsMemberGalleryRoleColorTrait;
 	const PLUGIN_ID = "crsmgrc";
 	const PLUGIN_NAME = "CrsMemberGalleryRoleColor";
 	const PLUGIN_CLASS_NAME = self::class;

@@ -27,4 +27,5 @@ return array(
     'srag\\RemovePluginDataConfirm\\PluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
     'srag\\RemovePluginDataConfirm\\RemovePluginDataConfirmException' => $vendorDir . '/srag/removeplugindataconfirm/src/RemovePluginDataConfirmException.php',
     'srag\\RemovePluginDataConfirm\\RepositoryObjectPluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/RepositoryObjectPluginUninstallTrait.php',
+    'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\Utils\\CrsMemberGalleryRoleColorTrait' => $baseDir . '/src/Utils/CrsMemberGalleryRoleColorTrait.php',
 );

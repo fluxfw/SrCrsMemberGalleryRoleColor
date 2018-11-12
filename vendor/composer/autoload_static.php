@@ -52,6 +52,7 @@ class ComposerStaticInit62a96a7165ea031030464a508070b7d8
         'srag\\RemovePluginDataConfirm\\PluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
         'srag\\RemovePluginDataConfirm\\RemovePluginDataConfirmException' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/RemovePluginDataConfirmException.php',
         'srag\\RemovePluginDataConfirm\\RepositoryObjectPluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/RepositoryObjectPluginUninstallTrait.php',
+        'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\Utils\\CrsMemberGalleryRoleColorTrait' => __DIR__ . '/../..' . '/src/Utils/CrsMemberGalleryRoleColorTrait.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "eb6622659916f8e14f145597e9b65210",
@@ -53,16 +53,16 @@
         },
         {
             "name": "srag/removeplugindataconfirm",
-            "version": "v0.3.0",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/RemovePluginDataConfirm.git",
-                "reference": "c1c7147433c65136ab4378db406c01b094692336"
+                "reference": "b816ca0856d77eb245e445e7529fcd4906d666a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/RemovePluginDataConfirm/zipball/c1c7147433c65136ab4378db406c01b094692336",
-                "reference": "c1c7147433c65136ab4378db406c01b094692336",
+                "url": "https://api.github.com/repos/studer-raimann/RemovePluginDataConfirm/zipball/b816ca0856d77eb245e445e7529fcd4906d666a5",
+                "reference": "b816ca0856d77eb245e445e7529fcd4906d666a5",
                 "shasum": ""
             },
             "require": {
@@ -96,7 +96,7 @@
                 "plugin",
                 "uninstall"
             ],
-            "time": "2018-11-07T07:07:10+00:00"
+            "time": "2018-11-08T06:26:27+00:00"
         }
     ],
     "packages-dev": [],

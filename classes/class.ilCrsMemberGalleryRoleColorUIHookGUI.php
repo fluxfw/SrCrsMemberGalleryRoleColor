@@ -3,6 +3,7 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\DIC\DICTrait;
+use srag\UNIBAS\Plugins\CrsMemberGalleryRoleColor\Utils\CrsMemberGalleryRoleColorTrait;
 
 /**
  * Class ilCrsMemberGalleryRoleColorUIHookGUI
@@ -12,6 +13,7 @@ use srag\DIC\DICTrait;
 class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 	use DICTrait;
+	use CrsMemberGalleryRoleColorTrait;
 	const PLUGIN_CLASS_NAME = ilCrsMemberGalleryRoleColorPlugin::class;
 	const COLOR_ADMIN_BACKGROUND = "#A5D7D2";
 	const COLOR_ADMIN_FONT = "#000000";
