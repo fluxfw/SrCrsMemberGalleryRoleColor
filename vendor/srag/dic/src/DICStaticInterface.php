@@ -1,16 +1,16 @@
 <?php
 
-namespace srag\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor;
 
-use srag\DIC\DIC\DICInterface;
-use srag\DIC\Exception\DICException;
-use srag\DIC\Plugin\PluginInterface;
-use srag\DIC\Version\VersionInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\DICInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\Plugin\PluginInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\Version\VersionInterface;
 
 /**
  * Interface DICStaticInterface
  *
- * @package srag\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

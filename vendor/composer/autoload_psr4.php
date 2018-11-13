@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\' => array($baseDir . '/src'),
     'srag\\RemovePluginDataConfirm\\' => array($vendorDir . '/srag/removeplugindataconfirm/src'),
+    'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
     'srag\\DIC\\' => array($vendorDir . '/srag/dic/src'),
 );

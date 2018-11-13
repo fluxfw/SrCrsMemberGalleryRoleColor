@@ -1,11 +1,11 @@
 <?php
 
-namespace srag\DIC\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor\DIC;
 
 /**
  * Class AbstractDIC
  *
- * @package srag\DIC\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor\DIC
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

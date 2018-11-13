@@ -1,22 +1,22 @@
 <?php
 
-namespace srag\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor;
 
 use ilLogLevel;
 use ilPlugin;
 use League\Flysystem\PluginInterface;
-use srag\DIC\DIC\DICInterface;
-use srag\DIC\DIC\LegacyDIC;
-use srag\DIC\DIC\NewDIC;
-use srag\DIC\Exception\DICException;
-use srag\DIC\Plugin\Plugin;
-use srag\DIC\Version\Version;
-use srag\DIC\Version\VersionInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\DICInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\LegacyDIC;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\NewDIC;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\Plugin\Plugin;
+use srag\DIC\CrsMemberGalleryRoleColor\Version\Version;
+use srag\DIC\CrsMemberGalleryRoleColor\Version\VersionInterface;
 
 /**
  * Class DICStatic
  *
- * @package srag\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

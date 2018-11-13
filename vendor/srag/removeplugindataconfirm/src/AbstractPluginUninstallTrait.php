@@ -1,14 +1,14 @@
 <?php
 
-namespace srag\RemovePluginDataConfirm;
+namespace srag\RemovePluginDataConfirm\CrsMemberGalleryRoleColor;
 
 use ilUIPluginRouterGUI;
-use srag\DIC\DICTrait;
+use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
 
 /**
  * Trait AbstractPluginUninstallTrait
  *
- * @package srag\RemovePluginDataConfirm
+ * @package srag\RemovePluginDataConfirm\CrsMemberGalleryRoleColor
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  *
