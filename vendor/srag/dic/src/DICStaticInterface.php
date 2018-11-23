@@ -4,6 +4,7 @@ namespace srag\DIC\CrsMemberGalleryRoleColor;
 
 use srag\DIC\CrsMemberGalleryRoleColor\DIC\DICInterface;
 use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\Output\OutputInterface;
 use srag\DIC\CrsMemberGalleryRoleColor\Plugin\PluginInterface;
 use srag\DIC\CrsMemberGalleryRoleColor\Version\VersionInterface;
 
@@ -22,6 +23,15 @@ interface DICStaticInterface {
 	 * @return DICInterface DIC interface
 	 */
 	public static function dic()/*: DICInterface*/
+	;
+
+
+	/**
+	 * Get output interface
+	 *
+	 * @return OutputInterface Output interface
+	 */
+	public static function output()/*: OutputInterface*/
 	;
 
 

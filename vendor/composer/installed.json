@@ -1,28 +1,28 @@
 [
     {
         "name": "srag/dic",
-        "version": "v0.10.3",
-        "version_normalized": "0.10.3.0",
+        "version": "v0.13.2",
+        "version_normalized": "0.13.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/studer-raimann/DIC.git",
-            "reference": "7b4208ac5d0733e13d443099aac45dd89cf14b29"
+            "reference": "e8953ac483334923ec6e0e907c1711dccc2d809a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/7b4208ac5d0733e13d443099aac45dd89cf14b29",
-            "reference": "7b4208ac5d0733e13d443099aac45dd89cf14b29",
+            "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/e8953ac483334923ec6e0e907c1711dccc2d809a",
+            "reference": "e8953ac483334923ec6e0e907c1711dccc2d809a",
             "shasum": ""
         },
         "require": {
             "php": ">=5.6"
         },
-        "time": "2018-10-15T12:09:44+00:00",
+        "time": "2018-11-23T07:30:15+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "srag\\DIC\\": "src/"
+                "srag\\DIC\\CrsMemberGalleryRoleColor\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -48,23 +48,23 @@
     },
     {
         "name": "srag/librariesnamespacechanger",
-        "version": "v0.3.2",
-        "version_normalized": "0.3.2.0",
+        "version": "v0.3.6",
+        "version_normalized": "0.3.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/studer-raimann/LibrariesNamespaceChanger.git",
-            "reference": "60c9c9293acb9a2b9d51b3ce3ce18722c0ac87bb"
+            "reference": "cf5f3be4341270fbe46a977bbd1403d744fb797a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/studer-raimann/LibrariesNamespaceChanger/zipball/60c9c9293acb9a2b9d51b3ce3ce18722c0ac87bb",
-            "reference": "60c9c9293acb9a2b9d51b3ce3ce18722c0ac87bb",
+            "url": "https://api.github.com/repos/studer-raimann/LibrariesNamespaceChanger/zipball/cf5f3be4341270fbe46a977bbd1403d744fb797a",
+            "reference": "cf5f3be4341270fbe46a977bbd1403d744fb797a",
             "shasum": ""
         },
         "require": {
             "php": ">=5.6"
         },
-        "time": "2018-11-13T10:30:02+00:00",
+        "time": "2018-11-21T08:31:42+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -93,29 +93,29 @@
     },
     {
         "name": "srag/removeplugindataconfirm",
-        "version": "v0.3.1",
-        "version_normalized": "0.3.1.0",
+        "version": "v0.3.2",
+        "version_normalized": "0.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/studer-raimann/RemovePluginDataConfirm.git",
-            "reference": "b816ca0856d77eb245e445e7529fcd4906d666a5"
+            "reference": "d187bba94d9b7dc6e495587ef1487122f6856d4a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/studer-raimann/RemovePluginDataConfirm/zipball/b816ca0856d77eb245e445e7529fcd4906d666a5",
-            "reference": "b816ca0856d77eb245e445e7529fcd4906d666a5",
+            "url": "https://api.github.com/repos/studer-raimann/RemovePluginDataConfirm/zipball/d187bba94d9b7dc6e495587ef1487122f6856d4a",
+            "reference": "d187bba94d9b7dc6e495587ef1487122f6856d4a",
             "shasum": ""
         },
         "require": {
             "php": ">=5.6",
             "srag/dic": ">=0.1.0"
         },
-        "time": "2018-11-08T06:26:27+00:00",
+        "time": "2018-11-22T14:33:22+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "srag\\RemovePluginDataConfirm\\": "src/"
+                "srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",

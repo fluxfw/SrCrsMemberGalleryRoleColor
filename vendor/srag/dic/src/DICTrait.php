@@ -4,6 +4,7 @@ namespace srag\DIC\CrsMemberGalleryRoleColor;
 
 use srag\DIC\CrsMemberGalleryRoleColor\DIC\DICInterface;
 use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\Output\OutputInterface;
 use srag\DIC\CrsMemberGalleryRoleColor\Plugin\PluginInterface;
 use srag\DIC\CrsMemberGalleryRoleColor\Version\VersionInterface;
 
@@ -32,6 +33,16 @@ trait DICTrait {
 	 */
 	protected static final function dic()/*: DICInterface*/ {
 		return DICStatic::dic();
+	}
+
+
+	/**
+	 * Get output interface
+	 *
+	 * @return OutputInterface Output interface
+	 */
+	protected static final function output()/*: OutputInterface*/ {
+		return DICStatic::output();
 	}
 
 
