@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "srag/dic",
-            "version": "v0.13.2",
+            "version": "v0.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/DIC.git",
-                "reference": "e8953ac483334923ec6e0e907c1711dccc2d809a"
+                "reference": "a0e02850cb52e817fcfcdb9f396670d34f9f1818"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/e8953ac483334923ec6e0e907c1711dccc2d809a",
-                "reference": "e8953ac483334923ec6e0e907c1711dccc2d809a",
+                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/a0e02850cb52e817fcfcdb9f396670d34f9f1818",
+                "reference": "a0e02850cb52e817fcfcdb9f396670d34f9f1818",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "globals",
                 "trait"
             ],
-            "time": "2018-11-23T07:30:15+00:00"
+            "time": "2018-11-23T11:55:20+00:00"
         },
         {
             "name": "srag/librariesnamespacechanger",
@@ -115,7 +115,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\RemovePluginDataConfirm\\": "src/"
+                    "srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

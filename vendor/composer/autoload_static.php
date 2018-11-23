@@ -10,7 +10,7 @@ class ComposerStaticInitffd95136a364dcae24b51420bc79fb47
         's' => 
         array (
             'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\' => 46,
-            'srag\\RemovePluginDataConfirm\\' => 29,
+            'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\' => 55,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\' => 9,
         ),
@@ -21,7 +21,7 @@ class ComposerStaticInitffd95136a364dcae24b51420bc79fb47
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
-        'srag\\RemovePluginDataConfirm\\' => 
+        'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
