@@ -81,10 +81,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 								break;
 							default:
 								return [ "mode" => self::KEEP, "html" => "" ];
-								break;
-
 						}
-
 
 						// Get role
 						$roles = $container->getMembersObject()->getAssignedRoles($user_id);
@@ -128,7 +125,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 
 	/**
-	 * @param int                  $user_id
+	 * @param int            $user_id
 	 * @param ilParticipants $members
 	 *
 	 * @return string
@@ -154,7 +151,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 
 	/**
-	 * @param int                  $user_id
+	 * @param int            $user_id
 	 * @param ilParticipants $members
 	 *
 	 * @return string
