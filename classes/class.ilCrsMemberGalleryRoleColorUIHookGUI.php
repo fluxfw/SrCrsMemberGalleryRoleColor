@@ -24,6 +24,8 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 	const CARD_TEMPLATE_ID = "src/UI/templates/default/Card/tpl.card.html";
 	const TEMPLATE_GET = "template_get";
 	const INIT = "init";
+	const OBJECT_TYPE_CRS = "crs";
+	const OBJECT_TYPE_GRP = "grp";
 	/**
 	 * @var bool[]
 	 */
@@ -68,11 +70,24 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 						$user_id = intval(ilObjUser::getUserIdByLogin($user_login));
 
 						// Get course
-						$course_ref_id = intval(filter_input(INPUT_GET, "ref_id"));
-						$course = new ilObjCourse($course_ref_id);
+						$container_ref_id = intval(filter_input(INPUT_GET, "ref_id"));
+
+						switch (self::dic()->objDataCache()->lookupType(self::dic()->objDataCache()->lookupObjId($container_ref_id))) {
+							case self::OBJECT_TYPE_GRP:
+								$container = new ilObjGroup($container_ref_id);
+								break;
+							case self::OBJECT_TYPE_CRS:
+								$container = new ilObjCourse($container_ref_id);
+								break;
+							default:
+								return [ "mode" => self::KEEP, "html" => "" ];
+								break;
+
+						}
+
 
 						// Get role
-						$roles = $course->getMembersObject()->getAssignedRoles($user_id);
+						$roles = $container->getMembersObject()->getAssignedRoles($user_id);
 						$role_id = current($roles);
 						if (!empty($role_id)) {
 							$role = ilObjRole::_getTranslation(ilObjRole::_lookupTitle($role_id));
@@ -87,8 +102,8 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 							}
 
 							// Role color
-							$role_color_background = $this->getRoleColorBackground($user_id, $course->getMembersObject());
-							$role_color_font = $this->getRoleColorFont($user_id, $course->getMembersObject());
+							$role_color_background = $this->getRoleColorBackground($user_id, $container->getMembersObject());
+							$role_color_font = $this->getRoleColorFont($user_id, $container->getMembersObject());
 							$role_color_tpl = self::plugin()->template("role_color.html");
 							$role_color_tpl->setVariable("BACKGROUND_COLOR", $role_color_background);
 							$role_color_tpl->setVariable("FONT_COLOR", $role_color_font);
@@ -114,11 +129,11 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 	/**
 	 * @param int                  $user_id
-	 * @param ilCourseParticipants $members
+	 * @param ilParticipants $members
 	 *
 	 * @return string
 	 */
-	protected function getRoleColorBackground(int $user_id, ilCourseParticipants $members): string {
+	protected function getRoleColorBackground(int $user_id, ilParticipants $members): string {
 		switch (true) {
 			case $members->isAdmin($user_id):
 				$color = self::COLOR_ADMIN_BACKGROUND;
@@ -140,11 +155,11 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 	/**
 	 * @param int                  $user_id
-	 * @param ilCourseParticipants $members
+	 * @param ilParticipants $members
 	 *
 	 * @return string
 	 */
-	protected function getRoleColorFont(int $user_id, ilCourseParticipants $members): string {
+	protected function getRoleColorFont(int $user_id, ilParticipants $members): string {
 		switch (true) {
 			case $members->isAdmin($user_id):
 				$color = self::COLOR_ADMIN_FONT;
