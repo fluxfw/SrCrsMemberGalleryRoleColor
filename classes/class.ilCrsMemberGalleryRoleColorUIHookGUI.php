@@ -80,7 +80,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 								$container = new ilObjCourse($container_ref_id);
 								break;
 							default:
-								return [ "mode" => self::KEEP, "html" => "" ];
+								return parent::getHTML($a_comp, $a_part, $a_par);
 						}
 
 						// Get role
@@ -120,7 +120,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 			}
 		}
 
-		return [ "mode" => self::KEEP, "html" => "" ];
+		return parent::getHTML($a_comp, $a_part, $a_par);
 	}
 
 
