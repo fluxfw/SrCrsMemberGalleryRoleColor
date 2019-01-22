@@ -1,15 +1,19 @@
 <?php
 
-namespace srag\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor;
 
-use srag\DIC\DIC\DICInterface;
-use srag\DIC\Exception\DICException;
-use srag\DIC\Plugin\PluginInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\DICInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\Output\OutputInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\Plugin\PluginInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\Version\VersionInterface;
 
 /**
  * Trait DICTrait
  *
- * @package srag\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor
+ *
+ * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 trait DICTrait {
 
@@ -33,6 +37,16 @@ trait DICTrait {
 
 
 	/**
+	 * Get output interface
+	 *
+	 * @return OutputInterface Output interface
+	 */
+	protected static final function output()/*: OutputInterface*/ {
+		return DICStatic::output();
+	}
+
+
+	/**
 	 * Get plugin interface
 	 *
 	 * @return PluginInterface Plugin interface
@@ -45,6 +59,16 @@ trait DICTrait {
 		self::checkPluginClassNameConst();
 
 		return DICStatic::plugin(static::PLUGIN_CLASS_NAME);
+	}
+
+
+	/**
+	 * Get version interface
+	 *
+	 * @return VersionInterface Version interface
+	 */
+	protected static final function version()/*: VersionInterface*/ {
+		return DICStatic::version();
 	}
 
 

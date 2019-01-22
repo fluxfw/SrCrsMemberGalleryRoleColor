@@ -1,20 +1,28 @@
 <?php
 
-namespace srag\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor;
 
 use ilLogLevel;
 use ilPlugin;
-use League\Flysystem\PluginInterface;
-use srag\DIC\DIC\DICInterface;
-use srag\DIC\DIC\LegacyDIC;
-use srag\DIC\DIC\NewDIC;
-use srag\DIC\Exception\DICException;
-use srag\DIC\Plugin\Plugin;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\DICInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation\ILIAS52DIC;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation\ILIAS53DIC;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation\ILIAS54DIC;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation\LegacyDIC;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\Output\Output;
+use srag\DIC\CrsMemberGalleryRoleColor\Output\OutputInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\Plugin\Plugin;
+use srag\DIC\CrsMemberGalleryRoleColor\Plugin\PluginInterface;
+use srag\DIC\CrsMemberGalleryRoleColor\Version\Version;
+use srag\DIC\CrsMemberGalleryRoleColor\Version\VersionInterface;
 
 /**
  * Class DICStatic
  *
- * @package srag\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor
+ *
+ * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 final class DICStatic implements DICStaticInterface {
 
@@ -23,9 +31,28 @@ final class DICStatic implements DICStaticInterface {
 	 */
 	private static $dic = NULL;
 	/**
+	 * @var OutputInterface|null
+	 */
+	private static $output = NULL;
+	/**
 	 * @var PluginInterface[]
 	 */
 	private static $plugins = [];
+	/**
+	 * @var VersionInterface|null
+	 */
+	private static $version = NULL;
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public static function clearCache()/*: void*/ {
+		self::$dic = NULL;
+		self::$output = NULL;
+		self::$plugins = [];
+		self::$version = NULL;
+	}
 
 
 	/**
@@ -33,16 +60,42 @@ final class DICStatic implements DICStaticInterface {
 	 */
 	public static function dic()/*: DICInterface*/ {
 		if (self::$dic === NULL) {
-			if (ILIAS_VERSION_NUMERIC >= "5.2") {
-				global $DIC;
-				self::$dic = new NewDIC($DIC);
-			} else {
-				global $GLOBALS;
-				self::$dic = new LegacyDIC($GLOBALS);
+			switch (true) {
+				case (self::version()->isLower(VersionInterface::ILIAS_VERSION_5_2)):
+					global $GLOBALS;
+					self::$dic = new LegacyDIC($GLOBALS);
+					break;
+
+				case (self::version()->isLower(VersionInterface::ILIAS_VERSION_5_3)):
+					global $DIC;
+					self::$dic = new ILIAS52DIC($DIC);
+					break;
+
+				case (self::version()->isLower(VersionInterface::ILIAS_VERSION_5_4)):
+					global $DIC;
+					self::$dic = new ILIAS53DIC($DIC);
+					break;
+
+				default:
+					global $DIC;
+					self::$dic = new ILIAS54DIC($DIC);
+					break;
 			}
 		}
 
 		return self::$dic;
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public static function output()/*: OutputInterface*/ {
+		if (self::$output === NULL) {
+			self::$output = new Output();
+		}
+
+		return self::$output;
 	}
 
 
@@ -72,6 +125,18 @@ final class DICStatic implements DICStaticInterface {
 		}
 
 		return self::$plugins[$plugin_class_name];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public static function version()/*: VersionInterface*/ {
+		if (self::$version === NULL) {
+			self::$version = new Version();
+		}
+
+		return self::$version;
 	}
 
 

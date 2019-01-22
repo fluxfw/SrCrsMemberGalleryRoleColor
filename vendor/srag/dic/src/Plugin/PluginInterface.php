@@ -1,21 +1,18 @@
 <?php
 
-namespace srag\DIC\Plugin;
+namespace srag\DIC\CrsMemberGalleryRoleColor\Plugin;
 
-use ilConfirmationGUI;
 use ilPlugin;
-use ilPropertyFormGUI;
-use ilTable2GUI;
 use ilTemplate;
 use ilTemplateException;
-use JsonSerializable;
-use srag\DIC\Exception\DICException;
-use stdClass;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
 
 /**
  * Interface PluginInterface
  *
- * @package srag\DIC\Plugin
+ * @package srag\DIC\CrsMemberGalleryRoleColor\Plugin
+ *
+ * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 interface PluginInterface {
 
@@ -25,20 +22,6 @@ interface PluginInterface {
 	 * @return string Plugin directory
 	 */
 	public function directory()/*: string*/
-	;
-
-
-	/**
-	 * Output HTML, GUI or JSON
-	 *
-	 * @param string|ilTemplate|ilConfirmationGUI|ilPropertyFormGUI|ilTable2GUI|int|double|bool|array|stdClass|null|JsonSerializable $value html, gui instance or json value
-	 * @param bool                                                                                                                   $main  Display main skin?
-	 *
-	 * @throws DICException Class {get_class($value)} is not supported for output!
-	 * @throws ilTemplateException
-	 */
-	public function output($value, /*bool*/
-		$main = true)/*: void*/
 	;
 
 
@@ -90,6 +73,8 @@ interface PluginInterface {
 	 * Get ILIAS plugin object instance
 	 *
 	 * @return ilPlugin ILIAS plugin object instance
+	 *
+	 * @deprecated Please avoid to use ILIAS plugin object instance and instead use methods in this class!
 	 */
 	public function getPluginObject()/*: ilPlugin*/
 	;

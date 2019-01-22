@@ -1,16 +1,19 @@
 <?php
 
-namespace srag\DIC\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation;
 
 use ILIAS\DI\Container;
-use srag\DIC\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\AbstractDIC;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
 
 /**
- * Class NewDIC
+ * Class ILIAS53DIC
  *
- * @package srag\DIC\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation
+ *
+ * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class NewDIC extends AbstractDIC {
+final class ILIAS53DIC extends AbstractDIC {
 
 	/**
 	 * @var Container
@@ -19,11 +22,11 @@ final class NewDIC extends AbstractDIC {
 
 
 	/**
-	 * NewDIC constructor
+	 * ILIAS53DIC constructor
 	 *
 	 * @param Container $dic
 	 *
-	 * @access namespace
+	 * @internal
 	 */
 	public function __construct(Container $dic) {
 		parent::__construct();
@@ -60,11 +63,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function backgroundTasks()/*: BackgroundTaskServices*/ {
-		if ($this->is53()) {
-			return $this->dic->backgroundTasks();
-		} else {
-			throw new DICException("BackgroundTaskServices not exists in ILIAS 5.2 or below!");
-		}
+		return $this->dic->backgroundTasks();
 	}
 
 
@@ -88,11 +87,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function clientIni()/*: ilIniFile*/ {
-		if ($this->is54()) {
-			return $this->dic->clientIni();
-		} else {
-			return $this->dic["ilClientIniFile"];
-		}
+		return $this->dic["ilClientIniFile"];
 	}
 
 
@@ -101,6 +96,14 @@ final class NewDIC extends AbstractDIC {
 	 */
 	public function collator()/*: Collator*/ {
 		return $this->dic["ilCollator"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function conditions()/*: ilConditionService*/ {
+		throw new DICException("ilConditionService not exists in ILIAS 5.3 or below!");
 	}
 
 
@@ -140,11 +143,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function filesystem()/*: Filesystems*/ {
-		if ($this->is53()) {
-			return $this->dic->filesystem();
-		} else {
-			throw new DICException("Filesystems not exists in ILIAS 5.2 or below!");
-		}
+		return $this->dic->filesystem();
 	}
 
 
@@ -152,11 +151,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function help()/*: ilHelpGUI*/ {
-		if ($this->is54()) {
-			return $this->dic->help();
-		} else {
-			return $this->dic["ilHelp"];
-		}
+		return $this->dic["ilHelp"];
 	}
 
 
@@ -172,11 +167,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function http()/*: HTTPServices*/ {
-		if ($this->is53()) {
-			return $this->dic->http();
-		} else {
-			throw new DICException("HTTPServices not exists in ILIAS 5.2 or below!");
-		}
+		return $this->dic->http();
 	}
 
 
@@ -192,11 +183,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function iliasIni()/*: ilIniFile*/ {
-		if ($this->is54()) {
-			return $this->dic->iliasIni();
-		} else {
-			return $this->dic["ilIliasIniFile"];
-		}
+		return $this->dic["ilIliasIniFile"];
 	}
 
 
@@ -205,6 +192,14 @@ final class NewDIC extends AbstractDIC {
 	 */
 	public function language()/*: ilLanguage*/ {
 		return $this->dic->language();
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function learningHistory()/*: ilLearningHistoryService*/ {
+		throw new DICException("ilLearningHistoryService not exists in ILIAS 5.3 or below!");
 	}
 
 
@@ -244,11 +239,15 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function mailMimeSenderFactory()/*: ilMailMimeSenderFactory*/ {
-		if ($this->is53()) {
-			return $this->dic["mail.mime.sender.factory"];
-		} else {
-			throw new DICException("ilMailMimeSenderFactory not exists in ILIAS 5.2 or below!");
-		}
+		return $this->dic["mail.mime.sender.factory"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function mailMimeTransportFactory()/*: ilMailMimeTransportFactory*/ {
+		return $this->dic["mail.mime.transport.factory"];
 	}
 
 
@@ -257,6 +256,22 @@ final class NewDIC extends AbstractDIC {
 	 */
 	public function mainMenu()/*: ilMainMenuGUI*/ {
 		return $this->dic["ilMainMenu"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function mainTemplate()/*: ilTemplate*/ {
+		return $this->dic->ui()->mainTemplate();
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function news()/*: ilNewsService*/ {
+		throw new DICException("ilNewsService not exists in ILIAS 5.3 or below!");
 	}
 
 
@@ -273,6 +288,14 @@ final class NewDIC extends AbstractDIC {
 	 */
 	public function objDefinition()/*: ilObjectDefinition*/ {
 		return $this->dic["objDefinition"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function object()/*: ilObjectService*/ {
+		throw new DICException("ilObjectService not exists in ILIAS 5.3 or below!");
 	}
 
 
@@ -328,11 +351,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function systemStyle()/*: ilStyleDefinition*/ {
-		if ($this->is54()) {
-			return $this->dic->systemStyle();
-		} else {
-			return $this->dic["styleDefinition"];
-		}
+		return $this->dic["styleDefinition"];
 	}
 
 
@@ -341,14 +360,6 @@ final class NewDIC extends AbstractDIC {
 	 */
 	public function tabs()/*: ilTabsGUI*/ {
 		return $this->dic->tabs();
-	}
-
-
-	/**
-	 * @inheritdoc
-	 */
-	public function template()/*: ilTemplate*/ {
-		return $this->dic->ui()->mainTemplate();
 	}
 
 
@@ -380,11 +391,7 @@ final class NewDIC extends AbstractDIC {
 	 * @inheritdoc
 	 */
 	public function upload()/*: FileUpload*/ {
-		if ($this->is53()) {
-			return $this->dic->upload();
-		} else {
-			throw new DICException("FileUpload not exists in ILIAS 5.2 or below!");
-		}
+		return $this->dic->upload();
 	}
 
 
@@ -401,21 +408,5 @@ final class NewDIC extends AbstractDIC {
 	 */
 	public function dic()/*: Container*/ {
 		return $this->dic;
-	}
-
-
-	/**
-	 * @return bool
-	 */
-	private function is53()/*: bool*/ {
-		return (ILIAS_VERSION_NUMERIC >= "5.3");
-	}
-
-
-	/**
-	 * @return bool
-	 */
-	private function is54()/*: bool*/ {
-		return (ILIAS_VERSION_NUMERIC >= "5.4");
 	}
 }

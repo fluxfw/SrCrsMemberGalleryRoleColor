@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\DIC\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor\DIC;
 
 use Collator;
 use ilAccess;
@@ -8,6 +8,7 @@ use ilAppEventHandler;
 use ilAuthSession;
 use ilBenchmark;
 use ilBrowser;
+use ilConditionService;
 use ilCtrl;
 use ilCtrlStructureReader;
 use ilDBInterface;
@@ -22,14 +23,18 @@ use ILIAS\Filesystem\Filesystems;
 use ILIAS\FileUpload\FileUpload;
 use ilIniFile;
 use ilLanguage;
+use ilLearningHistoryService;
 use ilLocatorGUI;
 use ilLog;
 use ilLoggerFactory;
 use ilMailMimeSenderFactory;
+use ilMailMimeTransportFactory;
 use ilMainMenuGUI;
 use ilNavigationHistory;
+use ilNewsService;
 use ilObjectDataCache;
 use ilObjectDefinition;
+use ilObjectService;
 use ilObjUser;
 use ilPluginAdmin;
 use ilRbacAdmin;
@@ -42,12 +47,14 @@ use ilTemplate;
 use ilToolbarGUI;
 use ilTree;
 use Session;
-use srag\DIC\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
 
 /**
  * Interface DICInterface
  *
- * @package srag\DIC\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor\DIC
+ *
+ * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 interface DICInterface {
 
@@ -76,6 +83,8 @@ interface DICInterface {
 	 * @return BackgroundTaskServices
 	 *
 	 * @throws DICException BackgroundTaskServices not exists in ILIAS 5.2 or below!
+	 *
+	 * @since ILIAS 5.3
 	 */
 	public function backgroundTasks()/*: BackgroundTaskServices*/
 	;
@@ -106,6 +115,17 @@ interface DICInterface {
 	 * @return Collator
 	 */
 	public function collator()/*: Collator*/
+	;
+
+
+	/**
+	 * @return ilConditionService
+	 *
+	 * @throws DICException ilConditionService not exists in ILIAS 5.3 or below!
+	 *
+	 * @since ILIAS 5.4
+	 */
+	public function conditions()/*: ilConditionService*/
 	;
 
 
@@ -141,6 +161,8 @@ interface DICInterface {
 	 * @return Filesystems
 	 *
 	 * @throws DICException Filesystems not exists in ILIAS 5.2 or below!
+	 *
+	 * @since ILIAS 5.3
 	 */
 	public function filesystem()/*: Filesystems*/
 	;
@@ -164,6 +186,8 @@ interface DICInterface {
 	 * @return HTTPServices
 	 *
 	 * @throws DICException HTTPServices not exists in ILIAS 5.2 or below!
+	 *
+	 * @since ILIAS 5.3
 	 */
 	public function http()/*: HTTPServices*/
 	;
@@ -191,6 +215,17 @@ interface DICInterface {
 
 
 	/**
+	 * @return ilLearningHistoryService
+	 *
+	 * @throws DICException ilLearningHistoryService not exists in ILIAS 5.3 or below!
+	 *
+	 * @since ILIAS 5.4
+	 */
+	public function learningHistory()/*: ilLearningHistoryService*/
+	;
+
+
+	/**
 	 * @return ilLocatorGUI
 	 */
 	public function locator()/*: ilLocatorGUI*/
@@ -208,6 +243,8 @@ interface DICInterface {
 	 * @return LoggingServices
 	 *
 	 * @throws DICException LoggingServices not exists in ILIAS 5.2 or below!
+	 *
+	 * @since ILIAS 5.3
 	 */
 	public function logger()/*: LoggingServices*/
 	;
@@ -224,8 +261,21 @@ interface DICInterface {
 	 * @return ilMailMimeSenderFactory
 	 *
 	 * @throws DICException ilMailMimeSenderFactory not exists in ILIAS 5.2 or below!
+	 *
+	 * @since ILIAS 5.3
 	 */
 	public function mailMimeSenderFactory()/*: ilMailMimeSenderFactory*/
+	;
+
+
+	/**
+	 * @return ilMailMimeTransportFactory
+	 *
+	 * @throws DICException ilMailMimeTransportFactory not exists in ILIAS 5.2 or below!
+	 *
+	 * @since ILIAS 5.3
+	 */
+	public function mailMimeTransportFactory()/*: ilMailMimeTransportFactory*/
 	;
 
 
@@ -233,6 +283,24 @@ interface DICInterface {
 	 * @return ilMainMenuGUI
 	 */
 	public function mainMenu()/*: ilMainMenuGUI*/
+	;
+
+
+	/**
+	 * @return ilTemplate Main ilTemplate instance
+	 */
+	public function mainTemplate()/*: ilTemplate*/
+	;
+
+
+	/**
+	 * @return ilNewsService
+	 *
+	 * @throws DICException ilNewsService not exists in ILIAS 5.3 or below!
+	 *
+	 * @since ILIAS 5.4
+	 */
+	public function news()/*: ilNewsService*/
 	;
 
 
@@ -247,6 +315,17 @@ interface DICInterface {
 	 * @return ilObjectDefinition
 	 */
 	public function objDefinition()/*: ilObjectDefinition*/
+	;
+
+
+	/**
+	 * @return ilObjectService
+	 *
+	 * @throws DICException ilObjectService not exists in ILIAS 5.3 or below!
+	 *
+	 * @since ILIAS 5.4
+	 */
+	public function object()/*: ilObjectService*/
 	;
 
 
@@ -307,13 +386,6 @@ interface DICInterface {
 
 
 	/**
-	 * @return ilTemplate Main-Template
-	 */
-	public function template()/*: ilTemplate*/
-	;
-
-
-	/**
 	 * @return ilToolbarGUI
 	 */
 	public function toolbar()/*: ilToolbarGUI*/
@@ -331,6 +403,8 @@ interface DICInterface {
 	 * @return UIServices
 	 *
 	 * @throws DICException UIServices not exists in ILIAS 5.1 or below!
+	 *
+	 * @since ILIAS 5.2
 	 */
 	public function ui()/*: UIServices*/
 	;
@@ -340,6 +414,8 @@ interface DICInterface {
 	 * @return FileUpload
 	 *
 	 * @throws DICException FileUpload not exists in ILIAS 5.2 or below!
+	 *
+	 * @since ILIAS 5.3
 	 */
 	public function upload()/*: FileUpload*/
 	;

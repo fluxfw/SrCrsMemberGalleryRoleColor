@@ -1,8 +1,7 @@
 {
   "name": "srag/unibas/plugins/crsmembergalleryrolecolor",
   "description": "",
-  "version": "1.0.0",
-  "type": "library",
+  "type": "project",
   "keywords": [
     "ILIAS",
     "Plugin",
@@ -24,6 +23,7 @@
   "require": {
     "php": ">=7.0",
     "srag/dic": ">=0.1.0",
+    "srag/librariesnamespacechanger": ">=0.1.0",
     "srag/removeplugindataconfirm": ">=0.1.0"
   },
   "autoload": {
@@ -35,8 +35,11 @@
     ]
   },
   "config": {
+    "classmap-authoritative": true,
     "optimize-autoloader": true,
-    "sort-packages": true,
-    "classmap-authoritative": true
+    "sort-packages": true
+  },
+  "scripts": {
+    "pre-autoload-dump": "srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger::rewriteLibrariesNamespaces"
   }
 }

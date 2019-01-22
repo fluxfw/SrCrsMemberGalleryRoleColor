@@ -1,14 +1,17 @@
 <?php
 
-namespace srag\DIC\DIC;
+namespace srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation;
 
 use ilLoggerFactory;
-use srag\DIC\Exception\DICException;
+use srag\DIC\CrsMemberGalleryRoleColor\DIC\AbstractDIC;
+use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
 
 /**
  * Class LegacyDIC
  *
- * @package srag\DIC\DIC
+ * @package srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation
+ *
+ * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 final class LegacyDIC extends AbstractDIC {
 
@@ -23,7 +26,7 @@ final class LegacyDIC extends AbstractDIC {
 	 *
 	 * @param array $globals
 	 *
-	 * @access namespace
+	 * @internal
 	 */
 	public function __construct(array &$globals) {
 		parent::__construct();
@@ -93,6 +96,14 @@ final class LegacyDIC extends AbstractDIC {
 	 */
 	public function collator()/*: Collator*/ {
 		return $this->globals["ilCollator"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function conditions()/*: ilConditionService*/ {
+		throw new DICException("ilConditionService not exists in ILIAS 5.3 or below!");
 	}
 
 
@@ -187,6 +198,14 @@ final class LegacyDIC extends AbstractDIC {
 	/**
 	 * @inheritdoc
 	 */
+	public function learningHistory()/*: ilLearningHistoryService*/ {
+		throw new DICException("ilLearningHistoryService not exists in ILIAS 5.3 or below!");
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
 	public function locator()/*: ilLocatorGUI*/ {
 		return $this->globals["ilLocator"];
 	}
@@ -227,8 +246,32 @@ final class LegacyDIC extends AbstractDIC {
 	/**
 	 * @inheritdoc
 	 */
+	public function mailMimeTransportFactory()/*: ilMailMimeTransportFactory*/ {
+		throw new DICException("ilMailMimeTransportFactory not exists in ILIAS 5.2 or below!");
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
 	public function mainMenu()/*: ilMainMenuGUI*/ {
 		return $this->globals["ilMainMenu"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function mainTemplate()/*: ilTemplate*/ {
+		return $this->globals["tpl"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function news()/*: ilNewsService*/ {
+		throw new DICException("ilNewsService not exists in ILIAS 5.3 or below!");
 	}
 
 
@@ -245,6 +288,14 @@ final class LegacyDIC extends AbstractDIC {
 	 */
 	public function objDefinition()/*: ilObjectDefinition*/ {
 		return $this->globals["objDefinition"];
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
+	public function object()/*: ilObjectService*/ {
+		throw new DICException("ilObjectService not exists in ILIAS 5.3 or below!");
 	}
 
 
@@ -309,14 +360,6 @@ final class LegacyDIC extends AbstractDIC {
 	 */
 	public function tabs()/*: ilTabsGUI*/ {
 		return $this->globals["ilTabs"];
-	}
-
-
-	/**
-	 * @inheritdoc
-	 */
-	public function template()/*: ilTemplate*/ {
-		return $this->globals["tpl"];
 	}
 
 

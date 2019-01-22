@@ -3,7 +3,7 @@ Use all ILIAS globals in your class
 ### Usage
 
 #### Composer
-First add the follow to your `composer.json` file:
+First add the following to your `composer.json` file:
 ```json
 "require": {
   "srag/dic": ">=0.1.0"
@@ -13,13 +13,15 @@ And run a `composer install`.
 
 If you deliver your plugin, the plugin has it's own copy of this library and the user doesn't need to install the library.
 
-Hint: Because of multiple autoloaders of plugins, it could be, that different versions of this library exists and suddenly your plugin use an old version of an other plugin! So you should keep up to date your plugin with `composer update`.
+Tip: Because of multiple autoloaders of plugins, it could be, that different versions of this library exists and suddenly your plugin use an older or a newer version of an other plugin!
+
+So I recommand to use [srag/librariesnamespacechanger](https://packagist.org/packages/srag/librariesnamespacechanger) in your plugin.
 
 #### Use trait
 Declare your class like follow:
 ```php
 //...
-use srag\DIC\DICTrait;
+use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
 //...
 class x {
 	//...
@@ -50,7 +52,7 @@ For instance you can access the ilCtrl global like:
 self::dic()->ctrl()/*: ilCtrl*/;
 ```
 
-You can now access the plugin interface, in instance and in static places:
+You can access the plugin interface, in instance and in static places:
 ```php
 /**
  * Get plugin interface
@@ -74,17 +76,43 @@ For plugin dir use:
 self::plugin()->directory()/*: string*/;
 ```
 
-For output html, gui or json use:
+For output HTML or GUI use:
 ```php
 /**
- * Output HTML, GUI or JSON
+ * Output HTML or GUI
  * 
- * @param string|ilTemplate|ilConfirmationGUI|ilPropertyFormGUI|ilTable2GUI|int|double|bool|array|stdClass|JsonSerializable $html HTML code or some gui instance
- * @param bool                                                                                                                   $main Display main skin?
+ * @param string|object $html HTML code or some GUI instance
+ * @param bool $main Display main skin?
  *
  * @throws DICException
  */
-self::plugin()->output($value, $main = true)/*: void*/;
+self::output()->output($value, $main = true)/*: void*/;
+```
+
+For output JSON:
+```php
+/**
+ * Output JSON
+ * 
+ * @param string|int|double|bool|array|stdClass|null|JsonSerializable $value JSON value
+ *
+ * @throws DICException
+ */
+self::output()->outputJSON($value)/*: void*/;
+```
+
+For get HTML of GUI:
+```php
+/**
+ * Get HTML of GUI
+ * 
+ * @param string|object $html HTML code or some GUI instance
+ *
+ * @return string HTML
+ *
+ * @throws DICException
+ */
+self::output()->getHTML($value)/*: string*/;
 ```
 
 For get a template use:
@@ -132,8 +160,20 @@ If you really need the ILIAS plugin object use but avoid this:
  * Get ILIAS plugin object instance
  *
  * @return ilPlugin ILIAS plugin object instance
+ *
+ * @deprecated Please avoid to use ILIAS plugin object instance and instead use methods in this class!
  */
 self::plugin()->getPluginObject()/*: ilPlugin*/;
+```
+
+You can access ILIAS version informations, in instance and in static places:
+```php
+/**
+ * Get version interface
+ * 
+ * @return VersionInterface Version interface
+ */
+self::version()/*: VersionInterface*/;
 ```
 
 If you really need DICTrait outside a class (For instance in `dbupdate.php`), use `DICStatic::dic()` or `DICStatic::plugin(ilXPlugin::class)`.
@@ -149,21 +189,24 @@ Please avoid to store in variables or class variables.
 - Use also `__DIR__` for `Customizing/..` and use relative paths from your class perspective (Except in `dbupdate.php`)
 - Try to avoid use `$pl`
 
-#### Requirements
-This library should works with every ILIAS version provided the features are supported.
+### Dependencies
+* PHP >=5.6
+* [composer](https://getcomposer.org)
+
+Please use it for further development!
 
 ### Adjustment suggestions
 * Adjustment suggestions by pull requests on https://git.studer-raimann.ch/ILIAS/Plugins/DIC/tree/develop
 * Adjustment suggestions which are not yet worked out in detail by Jira tasks under https://jira.studer-raimann.ch/projects/LDIC
 * Bug reports under https://jira.studer-raimann.ch/projects/LDIC
-* For external developers please send an email to support-custom1@studer-raimann.ch
+* For external users please send an email to support-custom1@studer-raimann.ch
 
 ### Development
 If you want development in this library you should install this library like follow:
 
-Start at your ILIAS root directory 
+Start at your ILIAS root directory
 ```bash
-mkdir -p Customizing/global/plugins/Libraries/  
-cd Customizing/global/plugins/Libraries/  
-git clone git@git.studer-raimann.ch:ILIAS/Plugins/DIC.git DIC
+mkdir -p Customizing/global/libraries
+cd Customizing/global/libraries
+git clone -b develop git@git.studer-raimann.ch:ILIAS/Plugins/DIC.git DIC
 ```

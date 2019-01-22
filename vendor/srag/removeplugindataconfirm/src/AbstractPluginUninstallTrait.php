@@ -1,14 +1,18 @@
 <?php
 
-namespace srag\RemovePluginDataConfirm;
+namespace srag\RemovePluginDataConfirm\CrsMemberGalleryRoleColor;
 
 use ilUIPluginRouterGUI;
-use srag\DIC\DICTrait;
+use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
 
 /**
  * Trait AbstractPluginUninstallTrait
  *
- * @package srag\RemovePluginDataConfirm
+ * @package srag\RemovePluginDataConfirm\CrsMemberGalleryRoleColor
+ *
+ * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
+ *
+ * @access  namespace
  */
 trait AbstractPluginUninstallTrait {
 
@@ -31,6 +35,8 @@ trait AbstractPluginUninstallTrait {
 
 	/**
 	 * @var AbstractRemovePluginDataConfirm[]
+	 *
+	 * @internal
 	 */
 	private static $remove_plugin_data_confirm_classes = [];
 
@@ -41,7 +47,7 @@ trait AbstractPluginUninstallTrait {
 	 * @return bool
 	 * @throws RemovePluginDataConfirmException
 	 *
-	 * @access namespace
+	 * @internal
 	 */
 	protected final function pluginUninstall(/*bool*/
 		$remove_data = true)/*: bool*/ {
@@ -68,12 +74,11 @@ trait AbstractPluginUninstallTrait {
 
 		$uninstall_removes_data = boolval($uninstall_removes_data);
 
-		if ($uninstall_removes_data) {
-			if ($remove_data) {
+		if ($remove_data) {
+			if ($uninstall_removes_data) {
 				$this->deleteData();
 			}
-		} else {
-			// Ask again if reinstalled
+
 			$remove_plugin_data_confirm_class->removeUninstallRemovesData();
 		}
 
@@ -90,6 +95,8 @@ trait AbstractPluginUninstallTrait {
 
 	/**
 	 * @return bool
+	 *
+	 * @internal
 	 */
 	private static final function getRemovePluginDataConfirmConst()/*: bool*/ {
 		if (defined("static::REMOVE_PLUGIN_DATA_CONFIRM")) {
@@ -105,7 +112,7 @@ trait AbstractPluginUninstallTrait {
 	 * @throws RemovePluginDataConfirmException Class not exists!
 	 * @throws RemovePluginDataConfirmException Class not extends AbstractRemovePluginDataConfirm!
 	 *
-	 * @access namespace
+	 * @internal
 	 */
 	protected static final function getRemovePluginDataConfirmClass()/*: AbstractRemovePluginDataConfirm*/ {
 		self::checkRemovePluginDataConfirmClassNameConst();
@@ -136,6 +143,8 @@ trait AbstractPluginUninstallTrait {
 
 	/**
 	 * @throws RemovePluginDataConfirmException Your class needs to implement the REMOVE_PLUGIN_DATA_CONFIRM_CLASS_NAME constant!
+	 *
+	 * @internal
 	 */
 	private static final function checkRemovePluginDataConfirmClassNameConst()/*: void*/ {
 		if (!defined("static::REMOVE_PLUGIN_DATA_CONFIRM_CLASS_NAME") || empty(static::REMOVE_PLUGIN_DATA_CONFIRM_CLASS_NAME)) {
