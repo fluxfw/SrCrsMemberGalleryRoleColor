@@ -9,6 +9,9 @@ git clone git@git.studer-raimann.ch:ILIAS/Kunden/UNIBAS/CrsMemberGalleryRoleColo
 ```
 Update, activate and config the plugin in the ILIAS Plugin Administration
 
+### Some screenshots
+TODO
+
 ### Dependencies
 * ILIAS 5.3
 * PHP >=7.0
