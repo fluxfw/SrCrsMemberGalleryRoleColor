@@ -106,7 +106,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 							$html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
 
 							// Fix title
-							//$title_tpl =self::plugin()->template("title.html");
+							//$title_tpl = self::plugin()->template("title.html");
 							//$title_tpl_html = self::output()->getHTML($title_tpl);
 							$title_tpl_html = file_get_contents(__DIR__ . "/../templates/title.html");
 							$html = str_replace('<dt>', $title_tpl_html, $html);
