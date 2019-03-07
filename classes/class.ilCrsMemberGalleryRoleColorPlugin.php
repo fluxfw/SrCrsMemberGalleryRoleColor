@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\DICTrait;
+use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
 
 /**
  * Class ilCrsMemberGalleryRoleColorPlugin
