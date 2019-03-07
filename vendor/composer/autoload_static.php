@@ -10,7 +10,6 @@ class ComposerStaticInitffd95136a364dcae24b51420bc79fb47
         's' => 
         array (
             'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\' => 46,
-            'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\' => 55,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\' => 9,
         ),
@@ -20,10 +19,6 @@ class ComposerStaticInitffd95136a364dcae24b51420bc79fb47
         'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
         'srag\\LibrariesNamespaceChanger\\' => 
         array (
@@ -36,7 +31,6 @@ class ComposerStaticInitffd95136a364dcae24b51420bc79fb47
     );
 
     public static $classMap = array (
-        'CrsMemberGalleryRoleColorConfirm' => __DIR__ . '/../..' . '/classes/uninstall/class.CrsMemberGalleryRoleColorConfirm.php',
         'ilCrsMemberGalleryRoleColorPlugin' => __DIR__ . '/../..' . '/classes/class.ilCrsMemberGalleryRoleColorPlugin.php',
         'ilCrsMemberGalleryRoleColorUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilCrsMemberGalleryRoleColorUIHookGUI.php',
         'srag\\DIC\\CrsMemberGalleryRoleColor\\DICStatic' => __DIR__ . '/..' . '/srag/dic/src/DICStatic.php',
@@ -58,12 +52,6 @@ class ComposerStaticInitffd95136a364dcae24b51420bc79fb47
         'srag\\DIC\\CrsMemberGalleryRoleColor\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\CrsMemberGalleryRoleColor\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
-        'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\AbstractPluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/AbstractPluginUninstallTrait.php',
-        'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\AbstractRemovePluginDataConfirm' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/AbstractRemovePluginDataConfirm.php',
-        'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\PluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
-        'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\RemovePluginDataConfirmException' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/RemovePluginDataConfirmException.php',
-        'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\RepositoryObjectPluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/RepositoryObjectPluginUninstallTrait.php',
-        'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\Utils\\CrsMemberGalleryRoleColorTrait' => __DIR__ . '/../..' . '/src/Utils/CrsMemberGalleryRoleColorTrait.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

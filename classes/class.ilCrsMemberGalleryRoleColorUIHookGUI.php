@@ -3,7 +3,6 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
-use srag\UNIBAS\Plugins\CrsMemberGalleryRoleColor\Utils\CrsMemberGalleryRoleColorTrait;
 
 /**
  * Class ilCrsMemberGalleryRoleColorUIHookGUI
@@ -13,7 +12,6 @@ use srag\UNIBAS\Plugins\CrsMemberGalleryRoleColor\Utils\CrsMemberGalleryRoleColo
 class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 	use DICTrait;
-	use CrsMemberGalleryRoleColorTrait;
 	const PLUGIN_CLASS_NAME = ilCrsMemberGalleryRoleColorPlugin::class;
 	const COLOR_ADMIN_BACKGROUND = "#A5D7D2";
 	const COLOR_ADMIN_FONT = "#000000";
@@ -64,7 +62,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 					// Get User
 					$matches = [];
-					preg_match("/<dt>" . self::plugin()->translate("username", "", [], false) . "<\/dt>\n\t<dd>(.+)<\/dd>/", $html, $matches);
+					preg_match("/<dt>" . self::dic()->language()->txt("username") . "<\/dt>\n\t<dd>(.+)<\/dd>/", $html, $matches);
 					if (is_array($matches) && count($matches) >= 2) {
 						$user_login = $matches[1];
 						$user_id = intval(ilObjUser::getUserIdByLogin($user_login));
@@ -87,13 +85,13 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 						$roles = $container->getMembersObject()->getAssignedRoles($user_id);
 						$role_id = current($roles);
 						if (!empty($role_id)) {
-							$role = ilObjRole::_getTranslation(ilObjRole::_lookupTitle($role_id));
+							$role = ilObjRole::_getTranslation(self::dic()->objDataCache()->lookupTitle($role_id));
 
 							// Role
 							$role_html_pos = stripos($html, "</dl></div>");
 							if ($role_html_pos !== false) {
 								$role_tpl = self::plugin()->template("role.html");
-								$role_tpl->setVariable("ROLE_TITLE", self::plugin()->translate("role"));
+								$role_tpl->setVariable("ROLE_TITLE", self::dic()->language()->txt("role") . ":");
 								$role_tpl->setVariable("ROLE", $role);
 								$html = substr($html, 0, ($role_html_pos - 1)) . self::output()->getHTML($role_tpl) . substr($html, $role_html_pos);
 							}
