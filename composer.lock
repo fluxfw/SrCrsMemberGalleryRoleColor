@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f2ae491b4130386460d20d6e46dc801",
+    "content-hash": "ed6b4e8e6fa62c3f06b778baed66c27d",
     "packages": [
         {
             "name": "srag/dic",
-            "version": "v0.14.2",
+            "version": "v0.14.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/DIC.git",
-                "reference": "cf93a05f7c14ed9f0279f64e2325e8e88a66fbf9"
+                "reference": "7b8b2082622901cee63570b3e96be8a693f07279"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/cf93a05f7c14ed9f0279f64e2325e8e88a66fbf9",
-                "reference": "cf93a05f7c14ed9f0279f64e2325e8e88a66fbf9",
+                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/7b8b2082622901cee63570b3e96be8a693f07279",
+                "reference": "7b8b2082622901cee63570b3e96be8a693f07279",
                 "shasum": ""
             },
             "require": {
@@ -49,20 +49,20 @@
                 "globals",
                 "trait"
             ],
-            "time": "2018-11-30T09:06:55+00:00"
+            "time": "2019-02-26T08:34:09+00:00"
         },
         {
             "name": "srag/librariesnamespacechanger",
-            "version": "v0.3.6",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/LibrariesNamespaceChanger.git",
-                "reference": "cf5f3be4341270fbe46a977bbd1403d744fb797a"
+                "reference": "64a1728ed926f14d6d17b70caf4ebcc3d86df717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/LibrariesNamespaceChanger/zipball/cf5f3be4341270fbe46a977bbd1403d744fb797a",
-                "reference": "cf5f3be4341270fbe46a977bbd1403d744fb797a",
+                "url": "https://api.github.com/repos/studer-raimann/LibrariesNamespaceChanger/zipball/64a1728ed926f14d6d17b70caf4ebcc3d86df717",
+                "reference": "64a1728ed926f14d6d17b70caf4ebcc3d86df717",
                 "shasum": ""
             },
             "require": {
@@ -92,54 +92,7 @@
                 "ILIAS",
                 "libraries"
             ],
-            "time": "2018-11-21T08:31:42+00:00"
-        },
-        {
-            "name": "srag/removeplugindataconfirm",
-            "version": "v0.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/studer-raimann/RemovePluginDataConfirm.git",
-                "reference": "0a4c2efb645c77ed609885366d3ac8f17c1dedbc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/RemovePluginDataConfirm/zipball/0a4c2efb645c77ed609885366d3ac8f17c1dedbc",
-                "reference": "0a4c2efb645c77ed609885366d3ac8f17c1dedbc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "srag/dic": ">=0.1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "studer + raimann ag - Team Custom 1",
-                    "email": "support-custom1@studer-raimann.ch",
-                    "homepage": "https://studer-raimann.ch",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Demand if plugin data should be removed on uninstall",
-            "homepage": "https://github.com/studer-raimann/RemovePluginDataConfirm",
-            "keywords": [
-                "ILIAS",
-                "confirm",
-                "data",
-                "plugin",
-                "uninstall"
-            ],
-            "time": "2018-11-28T08:24:16+00:00"
+            "time": "2019-01-22T09:19:11+00:00"
         }
     ],
     "packages-dev": [],

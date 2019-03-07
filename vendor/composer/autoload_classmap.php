@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CrsMemberGalleryRoleColorConfirm' => $baseDir . '/classes/uninstall/class.CrsMemberGalleryRoleColorConfirm.php',
     'ilCrsMemberGalleryRoleColorPlugin' => $baseDir . '/classes/class.ilCrsMemberGalleryRoleColorPlugin.php',
     'ilCrsMemberGalleryRoleColorUIHookGUI' => $baseDir . '/classes/class.ilCrsMemberGalleryRoleColorUIHookGUI.php',
     'srag\\DIC\\CrsMemberGalleryRoleColor\\DICStatic' => $vendorDir . '/srag/dic/src/DICStatic.php',
@@ -28,10 +27,4 @@ return array(
     'srag\\DIC\\CrsMemberGalleryRoleColor\\Version\\Version' => $vendorDir . '/srag/dic/src/Version/Version.php',
     'srag\\DIC\\CrsMemberGalleryRoleColor\\Version\\VersionInterface' => $vendorDir . '/srag/dic/src/Version/VersionInterface.php',
     'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => $vendorDir . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
-    'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\AbstractPluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/AbstractPluginUninstallTrait.php',
-    'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\AbstractRemovePluginDataConfirm' => $vendorDir . '/srag/removeplugindataconfirm/src/AbstractRemovePluginDataConfirm.php',
-    'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\PluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
-    'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\RemovePluginDataConfirmException' => $vendorDir . '/srag/removeplugindataconfirm/src/RemovePluginDataConfirmException.php',
-    'srag\\RemovePluginDataConfirm\\CrsMemberGalleryRoleColor\\RepositoryObjectPluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/RepositoryObjectPluginUninstallTrait.php',
-    'srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\Utils\\CrsMemberGalleryRoleColorTrait' => $baseDir . '/src/Utils/CrsMemberGalleryRoleColorTrait.php',
 );
