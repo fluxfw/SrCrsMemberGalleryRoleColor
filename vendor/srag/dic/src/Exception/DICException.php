@@ -1,13 +1,13 @@
 <?php
 
-namespace srag\DIC\CrsMemberGalleryRoleColor\Exception;
+namespace srag\DIC\SrCrsMemberGalleryRoleColor\Exception;
 
 use ilException;
 
 /**
  * Class DICException
  *
- * @package srag\DIC\CrsMemberGalleryRoleColor\Exception
+ * @package srag\DIC\SrCrsMemberGalleryRoleColor\Exception
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

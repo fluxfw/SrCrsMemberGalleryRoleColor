@@ -1,15 +1,15 @@
 <?php
 
-namespace srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation;
+namespace srag\DIC\SrCrsMemberGalleryRoleColor\DIC\Implementation;
 
 use ILIAS\DI\Container;
-use srag\DIC\CrsMemberGalleryRoleColor\DIC\AbstractDIC;
-use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\SrCrsMemberGalleryRoleColor\DIC\AbstractDIC;
+use srag\DIC\SrCrsMemberGalleryRoleColor\Exception\DICException;
 
 /**
  * Class ILIAS52DIC
  *
- * @package srag\DIC\CrsMemberGalleryRoleColor\DIC\Implementation
+ * @package srag\DIC\SrCrsMemberGalleryRoleColor\DIC\Implementation
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

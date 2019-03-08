@@ -1,16 +1,16 @@
 <?php
 
-namespace srag\DIC\CrsMemberGalleryRoleColor\Plugin;
+namespace srag\DIC\SrCrsMemberGalleryRoleColor\Plugin;
 
 use ilPlugin;
 use ilTemplate;
 use ilTemplateException;
-use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\SrCrsMemberGalleryRoleColor\Exception\DICException;
 
 /**
  * Interface PluginInterface
  *
- * @package srag\DIC\CrsMemberGalleryRoleColor\Plugin
+ * @package srag\DIC\SrCrsMemberGalleryRoleColor\Plugin
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
