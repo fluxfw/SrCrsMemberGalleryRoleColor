@@ -10,14 +10,21 @@ git clone https://github.com/studer-raimann/SrCrsMemberGalleryRoleColor.git SrCr
 Update, activate and config the plugin in the ILIAS Plugin Administration
 
 ### Some screenshots
-TODO
+Config:
+![Config](./doc/screenshots/config.png)
+
+Members gallery:
+![Members gallery](./doc/screenshots/members_gallery.png)
 
 ### Dependencies
 * ILIAS 5.3 or ILIAS 5.4
 * PHP >=7.0
 * [composer](https://getcomposer.org)
+* [srag/activerecordconfig](https://packagist.org/packages/srag/activerecordconfig)
+* [srag/custominputguis](https://packagist.org/packages/srag/custominputguis)
 * [srag/dic](https://packagist.org/packages/srag/dic)
 * [srag/librariesnamespacechanger](https://packagist.org/packages/srag/librariesnamespacechanger)
+* [srag/removeplugindataconfirm](https://packagist.org/packages/srag/removeplugindataconfirm)
 
 Please use it for further development!
 

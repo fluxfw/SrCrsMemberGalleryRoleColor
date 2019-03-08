@@ -4,8 +4,101 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c896d9d7885ba212303a6ece5223800e",
+    "content-hash": "96e2dc92c1510590604b2425fd5d47cb",
     "packages": [
+        {
+            "name": "srag/activerecordconfig",
+            "version": "v0.14.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/studer-raimann/ActiveRecordConfig.git",
+                "reference": "96d6c2b61cd1a3fb219a7fabf8ffc07aa95e1b02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/studer-raimann/ActiveRecordConfig/zipball/96d6c2b61cd1a3fb219a7fabf8ffc07aa95e1b02",
+                "reference": "96d6c2b61cd1a3fb219a7fabf8ffc07aa95e1b02",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "srag/custominputguis": ">=0.1.0",
+                "srag/dic": ">=0.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "srag\\ActiveRecordConfig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "studer + raimann ag - Team Custom 1",
+                    "email": "support-custom1@studer-raimann.ch",
+                    "homepage": "https://studer-raimann.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple ActiveRecord config for ILIAS plugins",
+            "homepage": "https://github.com/studer-raimann/ActiveRecordConfig",
+            "keywords": [
+                "ILIAS",
+                "activerecord",
+                "config"
+            ],
+            "time": "2019-02-11T14:20:12+00:00"
+        },
+        {
+            "name": "srag/custominputguis",
+            "version": "v0.19.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/studer-raimann/CustomInputGUIs.git",
+                "reference": "9958d42f0393ed44580fb60ffe28c8f5e29984ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/9958d42f0393ed44580fb60ffe28c8f5e29984ea",
+                "reference": "9958d42f0393ed44580fb60ffe28c8f5e29984ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "srag/dic": ">=0.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "srag\\CustomInputGUIs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "studer + raimann ag - Team Custom 1",
+                    "email": "support-custom1@studer-raimann.ch",
+                    "homepage": "https://studer-raimann.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Custom Input-GUI's",
+            "homepage": "https://github.com/studer-raimann/CustomInputGUIs",
+            "keywords": [
+                "ILIAS",
+                "PropertyForm",
+                "gui",
+                "input",
+                "table"
+            ],
+            "time": "2019-03-08T06:57:27+00:00"
+        },
         {
             "name": "srag/dic",
             "version": "v0.14.13",
@@ -26,7 +119,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\DIC\\": "src/"
+                    "srag\\DIC\\SrCrsMemberGalleryRoleColor\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -93,6 +186,53 @@
                 "libraries"
             ],
             "time": "2019-01-22T09:19:11+00:00"
+        },
+        {
+            "name": "srag/removeplugindataconfirm",
+            "version": "v0.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/studer-raimann/RemovePluginDataConfirm.git",
+                "reference": "c9bab84437a3029ca919da727d7f315c6de3c675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/studer-raimann/RemovePluginDataConfirm/zipball/c9bab84437a3029ca919da727d7f315c6de3c675",
+                "reference": "c9bab84437a3029ca919da727d7f315c6de3c675",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "srag/dic": ">=0.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "srag\\RemovePluginDataConfirm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "studer + raimann ag - Team Custom 1",
+                    "email": "support-custom1@studer-raimann.ch",
+                    "homepage": "https://studer-raimann.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Demand if plugin data should be removed on uninstall",
+            "homepage": "https://github.com/studer-raimann/RemovePluginDataConfirm",
+            "keywords": [
+                "ILIAS",
+                "confirm",
+                "data",
+                "plugin",
+                "uninstall"
+            ],
+            "time": "2019-01-22T09:18:04+00:00"
         }
     ],
     "packages-dev": [],

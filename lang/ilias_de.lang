@@ -1,0 +1,17 @@
+config_color_admin_background#:#Farbe Admin Hintergrund
+config_color_admin_font#:#Farbe Admin Hintergrund
+config_color_member_background#:#Farbe Mitglied Hintergrund
+config_color_member_font#:#Farbe Mitglied Schrift
+config_color_tutor_background#:#Farbe Tutor Hintergrund
+config_color_tutor_font#:#Farbe Tutor Schrift
+config_configuration#:#Konfiguration
+config_configuration_saved#:#Konfiguration gespeichert
+config_save#:#Speichern
+removeplugindataconfirm_cancel#:#Abbrechen
+removeplugindataconfirm_confirm_remove_data#:#Möchten Sie die %1$s-Daten auch entfernen? Allenfalls möchten Sie das %1$s-Plugin nur deaktivieren?
+removeplugindataconfirm_deactivate#:#%1$s-Plugin nur deaktivieren
+removeplugindataconfirm_data#:#%1$s-Daten
+removeplugindataconfirm_keep_data#:#%1$s-Daten behalten
+removeplugindataconfirm_msg_kept_data#:#Die %1$s-Daten wurden behalten
+removeplugindataconfirm_msg_removed_data#:#Die %1$s-Daten wurden auch entfernt
+removeplugindataconfirm_remove_data#:#Entferne %1$s-Daten
