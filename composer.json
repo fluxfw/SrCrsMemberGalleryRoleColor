@@ -1,13 +1,12 @@
 {
-  "name": "srag/unibas/plugins/crsmembergalleryrolecolor",
+  "name": "srag/plugins/crsmembergalleryrolecolor",
   "description": "",
   "type": "project",
   "keywords": [
     "ILIAS",
-    "Plugin",
-    "UNIBAS"
+    "Plugin"
   ],
-  "homepage": "https://git.studer-raimann.ch/ILIAS/Kunden/UNIBAS/CrsMemberGalleryRoleColor",
+  "homepage": "https://github.com/studer-raimann/CrsMemberGalleryRoleColor",
   "license": "",
   "authors": [
     {
@@ -18,7 +17,7 @@
     }
   ],
   "support": {
-    "email": "support-custom1@studer-raimann.ch"
+    "issues": "https://plugins.studer-raimann.ch/goto.php?target=uihk_srsu_CRSMEM"
   },
   "require": {
     "php": ">=7.0",
@@ -27,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "srag\\UNIBAS\\Plugins\\CrsMemberGalleryRoleColor\\": "src/"
+      "srag\\Plugins\\CrsMemberGalleryRoleColor\\": "src/"
     },
     "classmap": [
       "classes/"
