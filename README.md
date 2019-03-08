@@ -1,11 +1,11 @@
 ## Installation
 
-### Install CrsMemberGalleryRoleColor-Plugin
+### Install SrCrsMemberGalleryRoleColor-Plugin
 Start at your ILIAS root directory
 ```bash
 mkdir -p Customizing/global/plugins/Services/UIComponent/UserInterfaceHook
 cd Customizing/global/plugins/Services/UIComponent/UserInterfaceHook
-git clone https://github.com/studer-raimann/CrsMemberGalleryRoleColor.git CrsMemberGalleryRoleColor
+git clone https://github.com/studer-raimann/SrCrsMemberGalleryRoleColor.git SrCrsMemberGalleryRoleColor
 ```
 Update, activate and config the plugin in the ILIAS Plugin Administration
 

@@ -2,17 +2,17 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
+use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 
 /**
- * Class ilCrsMemberGalleryRoleColorUIHookGUI
+ * Class ilSrCrsMemberGalleryRoleColorUIHookGUI
  *
  * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
+class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 	use DICTrait;
-	const PLUGIN_CLASS_NAME = ilCrsMemberGalleryRoleColorPlugin::class;
+	const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
 	const COLOR_ADMIN_BACKGROUND = "#A5D7D2";
 	const COLOR_ADMIN_FONT = "#000000";
 	const COLOR_TUTOR_BACKGROUND = "#D2EBE9";
@@ -31,7 +31,7 @@ class ilCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI {
 
 
 	/**
-	 * ilCrsMemberGalleryRoleColorUIHookGUI constructor
+	 * ilSrCrsMemberGalleryRoleColorUIHookGUI constructor
 	 */
 	public function __construct() {
 

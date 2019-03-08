@@ -1,11 +1,11 @@
 <?php
 
-namespace srag\DIC\CrsMemberGalleryRoleColor\Plugin;
+namespace srag\DIC\SrCrsMemberGalleryRoleColor\Plugin;
 
 /**
  * Interface Pluginable
  *
- * @package srag\DIC\CrsMemberGalleryRoleColor\Plugin
+ * @package srag\DIC\SrCrsMemberGalleryRoleColor\Plugin
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

@@ -2,18 +2,18 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
+use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 
 /**
- * Class ilCrsMemberGalleryRoleColorPlugin
+ * Class ilSrCrsMemberGalleryRoleColorPlugin
  *
  * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
+class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
 	use DICTrait;
 	const PLUGIN_ID = "crsmgrc";
-	const PLUGIN_NAME = "CrsMemberGalleryRoleColor";
+	const PLUGIN_NAME = "SrCrsMemberGalleryRoleColor";
 	const PLUGIN_CLASS_NAME = self::class;
 	/**
 	 * @var self|null
@@ -34,7 +34,7 @@ class ilCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
 
 	/**
-	 * ilCrsMemberGalleryRoleColorPlugin constructor
+	 * ilSrCrsMemberGalleryRoleColorPlugin constructor
 	 */
 	public function __construct() {
 		parent::__construct();

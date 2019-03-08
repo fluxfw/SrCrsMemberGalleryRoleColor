@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\DIC\CrsMemberGalleryRoleColor\DIC;
+namespace srag\DIC\SrCrsMemberGalleryRoleColor\DIC;
 
 use Collator;
 use ilAccess;
@@ -49,12 +49,12 @@ use ilTemplate;
 use ilToolbarGUI;
 use ilTree;
 use Session;
-use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\SrCrsMemberGalleryRoleColor\Exception\DICException;
 
 /**
  * Interface DICInterface
  *
- * @package srag\DIC\CrsMemberGalleryRoleColor\DIC
+ * @package srag\DIC\SrCrsMemberGalleryRoleColor\DIC
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

@@ -1,19 +1,19 @@
 <?php
 
-namespace srag\DIC\CrsMemberGalleryRoleColor\Output;
+namespace srag\DIC\SrCrsMemberGalleryRoleColor\Output;
 
 use ILIAS\UI\Component\Component;
 use ilTable2GUI;
 use ilTemplate;
 use JsonSerializable;
-use srag\DIC\CrsMemberGalleryRoleColor\DICTrait;
-use srag\DIC\CrsMemberGalleryRoleColor\Exception\DICException;
+use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
+use srag\DIC\SrCrsMemberGalleryRoleColor\Exception\DICException;
 use stdClass;
 
 /**
  * Class Output
  *
- * @package srag\DIC\CrsMemberGalleryRoleColor\Output
+ * @package srag\DIC\SrCrsMemberGalleryRoleColor\Output
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

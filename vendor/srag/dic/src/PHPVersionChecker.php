@@ -1,13 +1,13 @@
 <?php
 
-namespace srag\DIC\CrsMemberGalleryRoleColor;
+namespace srag\DIC\SrCrsMemberGalleryRoleColor;
 
 use Throwable;
 
 /**
  * Class PHPVersionChecker
  *
- * @package srag\DIC\CrsMemberGalleryRoleColor
+ * @package srag\DIC\SrCrsMemberGalleryRoleColor
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  *

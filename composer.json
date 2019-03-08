@@ -1,12 +1,12 @@
 {
-  "name": "srag/plugins/crsmembergalleryrolecolor",
+  "name": "srag/plugins/srcrsmembergalleryrolecolor",
   "description": "",
   "type": "project",
   "keywords": [
     "ILIAS",
     "Plugin"
   ],
-  "homepage": "https://github.com/studer-raimann/CrsMemberGalleryRoleColor",
+  "homepage": "https://github.com/studer-raimann/SrCrsMemberGalleryRoleColor",
   "license": "",
   "authors": [
     {
@@ -26,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "srag\\Plugins\\CrsMemberGalleryRoleColor\\": "src/"
+      "srag\\Plugins\\SrCrsMemberGalleryRoleColor\\": "src/"
     },
     "classmap": [
       "classes/"
