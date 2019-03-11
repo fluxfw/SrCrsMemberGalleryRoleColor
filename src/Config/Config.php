@@ -16,7 +16,7 @@ use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTr
 class Config extends ActiveRecordConfig {
 
 	use SrCrsMemberGalleryRoleColorTrait;
-	const TABLE_NAME = "ui_uihk_srcrsmgrc_config";
+	const TABLE_NAME = "ui_uihk_crsmgrc_config";
 	const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
 	const KEY_COLOR_ADMIN_BACKGROUND = "color_admin_background";
 	const KEY_COLOR_ADMIN_FONT = "color_admin_font";
