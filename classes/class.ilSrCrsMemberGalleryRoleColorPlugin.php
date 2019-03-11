@@ -15,7 +15,7 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin {
 
 	use PluginUninstallTrait;
 	use SrCrsMemberGalleryRoleColorTrait;
-	const PLUGIN_ID = "crsmgrc";
+	const PLUGIN_ID = "srcrsmgrc";
 	const PLUGIN_NAME = "SrCrsMemberGalleryRoleColor";
 	const PLUGIN_CLASS_NAME = self::class;
 	const REMOVE_PLUGIN_DATA_CONFIRM_CLASS_NAME = SrCrsMemberGalleryRoleColorRemoveDataConfirm::class;
