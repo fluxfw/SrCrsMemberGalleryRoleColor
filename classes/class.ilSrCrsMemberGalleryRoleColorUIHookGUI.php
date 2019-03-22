@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . "/../vendor/autoload.php";
-
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
