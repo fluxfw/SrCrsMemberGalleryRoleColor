@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/../vendor/autoload.php";
+
 use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\ActiveRecordConfigGUI;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigFormGUI;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
