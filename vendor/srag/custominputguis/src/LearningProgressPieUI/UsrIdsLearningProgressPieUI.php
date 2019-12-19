@@ -1,19 +1,19 @@
 <?php
 
-namespace srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPie;
+namespace srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPieUI;
 
 use ilLPObjSettings;
 use ilLPStatus;
 use ilObjectLP;
 
 /**
- * Class UsrIdsLearningProgressPie
+ * Class UsrIdsLearningProgressPieUI
  *
- * @package srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPie
+ * @package srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPieUI
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class UsrIdsLearningProgressPie extends AbstractLearningProgressPie {
+class UsrIdsLearningProgressPieUI extends AbstractLearningProgressPieUI {
 
 	/**
 	 * @var int

@@ -1,15 +1,15 @@
 <?php
 
-namespace srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPie;
+namespace srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPieUI;
 
 /**
- * Class CountLearningProgressPie
+ * Class CountLearningProgressPieUI
  *
- * @package srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPie
+ * @package srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\LearningProgressPieUI
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class CountLearningProgressPie extends AbstractLearningProgressPie {
+class CountLearningProgressPieUI extends AbstractLearningProgressPieUI {
 
 	/**
 	 * @var int[]
