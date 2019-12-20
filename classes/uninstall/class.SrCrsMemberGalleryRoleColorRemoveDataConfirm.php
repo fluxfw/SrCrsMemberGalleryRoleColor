@@ -12,8 +12,9 @@ use srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor\AbstractRemovePlugi
  *
  * @ilCtrl_isCalledBy SrCrsMemberGalleryRoleColorRemoveDataConfirm: ilUIPluginRouterGUI
  */
-class SrCrsMemberGalleryRoleColorRemoveDataConfirm extends AbstractRemovePluginDataConfirm {
+class SrCrsMemberGalleryRoleColorRemoveDataConfirm extends AbstractRemovePluginDataConfirm
+{
 
-	use SrCrsMemberGalleryRoleColorTrait;
-	const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
+    use SrCrsMemberGalleryRoleColorTrait;
+    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
 }
