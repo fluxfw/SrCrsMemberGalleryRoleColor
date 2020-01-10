@@ -31,17 +31,10 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
 
 
     /**
-     * @param string $a_comp
-     * @param string $a_part
-     * @param array  $a_par
-     *
-     * @return array
+     * @inheritDoc
      */
-    public function getHTML(/*string*/
-        $a_comp, /*string*/
-        $a_part, /*array*/
-        $a_par = []
-    ) : array {
+    public function getHTML(/*string*/ $a_comp, /*string*/ $a_part, /*array*/ $a_par = []) : array
+    {
 
         if (self::dic()->ctrl()->getCmdClass() === strtolower(ilUsersGalleryGUI::class)
             && (empty(self::dic()->ctrl()->getCmd()) || self::dic()->ctrl()->getCmd() === "view")
