@@ -4,7 +4,6 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\DIC\SrCrsMemberGalleryRoleColor\Util\LibraryLanguageInstaller;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config;
-use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 use srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor\PluginUninstallTrait;
 
 /**
@@ -16,7 +15,6 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
 {
 
     use PluginUninstallTrait;
-    use SrCrsMemberGalleryRoleColorTrait;
     const PLUGIN_ID = "srcrsmgrc";
     const PLUGIN_NAME = "SrCrsMemberGalleryRoleColor";
     const PLUGIN_CLASS_NAME = self::class;
@@ -70,7 +68,7 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     protected function deleteData()/*: void*/
     {
