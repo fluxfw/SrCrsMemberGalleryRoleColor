@@ -6,6 +6,7 @@ use ilColorPickerInputGUI;
 use ilSrCrsMemberGalleryRoleColorConfigGUI;
 use ilSrCrsMemberGalleryRoleColorPlugin;
 use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\PropertyFormGUI\ConfigPropertyFormGUI;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
  * Class ConfigFormGUI
@@ -17,6 +18,7 @@ use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\PropertyFormGUI\ConfigPrope
 class ConfigFormGUI extends ConfigPropertyFormGUI
 {
 
+    use SrCrsMemberGalleryRoleColorTrait;
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CONFIG_CLASS_NAME = Config::class;
     const LANG_MODULE = ilSrCrsMemberGalleryRoleColorConfigGUI::LANG_MODULE;

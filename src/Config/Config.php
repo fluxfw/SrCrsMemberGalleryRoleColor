@@ -4,6 +4,7 @@ namespace srag\Plugins\SrCrsMemberGalleryRoleColor\Config;
 
 use ilSrCrsMemberGalleryRoleColorPlugin;
 use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\ActiveRecordConfig;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
  * Class Config
@@ -15,6 +16,7 @@ use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\ActiveRecordConfig;
 class Config extends ActiveRecordConfig
 {
 
+    use SrCrsMemberGalleryRoleColorTrait;
     const TABLE_NAME = "ui_uihk_crsmgrc_config";
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const KEY_COLOR_ADMIN_BACKGROUND = "color_admin_background";

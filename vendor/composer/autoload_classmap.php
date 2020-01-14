@@ -106,6 +106,8 @@ return array(
     'srag\\LibrariesNamespaceChanger\\PHP7Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
     'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Config' => $baseDir . '/src/Config/Config.php',
     'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigFormGUI' => $baseDir . '/src/Config/ConfigFormGUI.php',
+    'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Repository' => $baseDir . '/src/Repository.php',
+    'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Utils\\SrCrsMemberGalleryRoleColorTrait' => $baseDir . '/src/Utils/SrCrsMemberGalleryRoleColorTrait.php',
     'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\BasePluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/BasePluginUninstallTrait.php',
     'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\PluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
     'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\RemovePluginDataConfirmCtrl' => $vendorDir . '/srag/removeplugindataconfirm/src/class.RemovePluginDataConfirmCtrl.php',

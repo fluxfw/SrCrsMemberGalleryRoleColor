@@ -2,6 +2,7 @@
 
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
  * Class ilSrCrsMemberGalleryRoleColorUIHookGUI
@@ -12,6 +13,7 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
 {
 
     use DICTrait;
+    use SrCrsMemberGalleryRoleColorTrait;
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CARD_TEMPLATE_ID = "src/UI/templates/default/Card/tpl.card.html";
     const TEMPLATE_GET = "template_get";

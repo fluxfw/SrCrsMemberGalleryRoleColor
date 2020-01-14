@@ -4,6 +4,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigFormGUI;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
  * Class ilSrCrsMemberGalleryRoleColorConfigGUI
@@ -14,6 +15,7 @@ class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
 {
 
     use DICTrait;
+    use SrCrsMemberGalleryRoleColorTrait;
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CMD_CONFIGURE = "configure";
     const CMD_UPDATE_CONFIGURE = "updateConfigure";
