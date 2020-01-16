@@ -148,7 +148,6 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
-        'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Config' => __DIR__ . '/../..' . '/src/Config/Config.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigFormGUI' => __DIR__ . '/../..' . '/src/Config/ConfigFormGUI.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Repository' => __DIR__ . '/../..' . '/src/Repository.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Utils\\SrCrsMemberGalleryRoleColorTrait' => __DIR__ . '/../..' . '/src/Utils/SrCrsMemberGalleryRoleColorTrait.php',

@@ -20,6 +20,12 @@ class ConfigFormGUI extends PropertyFormGUI
 
     use SrCrsMemberGalleryRoleColorTrait;
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
+    const KEY_COLOR_ADMIN_BACKGROUND = "color_admin_background";
+    const KEY_COLOR_ADMIN_FONT = "color_admin_font";
+    const KEY_COLOR_TUTOR_BACKGROUND = "color_tutor_background";
+    const KEY_COLOR_TUTOR_FONT = "color_tutor_font";
+    const KEY_COLOR_MEMBER_BACKGROUND = "color_member_background";
+    const KEY_COLOR_MEMBER_FONT = "color_member_font";
     const LANG_MODULE = ilSrCrsMemberGalleryRoleColorConfigGUI::LANG_MODULE;
 
 
@@ -41,7 +47,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                return Config::getField($key);
+                return self::srCrsMemberGalleryRoleColor()->config()->getField($key);
         }
     }
 
@@ -61,32 +67,32 @@ class ConfigFormGUI extends PropertyFormGUI
     protected function initFields()/*: void*/
     {
         $this->fields = [
-            Config::KEY_COLOR_ADMIN_BACKGROUND  => [
+            self::KEY_COLOR_ADMIN_BACKGROUND  => [
                 self::PROPERTY_CLASS    => ilColorPickerInputGUI::class,
                 self::PROPERTY_REQUIRED => true,
                 "setDefaultColor"       => ""
             ],
-            Config::KEY_COLOR_ADMIN_FONT        => [
+            self::KEY_COLOR_ADMIN_FONT        => [
                 self::PROPERTY_CLASS    => ilColorPickerInputGUI::class,
                 self::PROPERTY_REQUIRED => true,
                 "setDefaultColor"       => ""
             ],
-            Config::KEY_COLOR_TUTOR_BACKGROUND  => [
+            self::KEY_COLOR_TUTOR_BACKGROUND  => [
                 self::PROPERTY_CLASS    => ilColorPickerInputGUI::class,
                 self::PROPERTY_REQUIRED => true,
                 "setDefaultColor"       => ""
             ],
-            Config::KEY_COLOR_TUTOR_FONT        => [
+            self::KEY_COLOR_TUTOR_FONT        => [
                 self::PROPERTY_CLASS    => ilColorPickerInputGUI::class,
                 self::PROPERTY_REQUIRED => true,
                 "setDefaultColor"       => ""
             ],
-            Config::KEY_COLOR_MEMBER_BACKGROUND => [
+            self::KEY_COLOR_MEMBER_BACKGROUND => [
                 self::PROPERTY_CLASS    => ilColorPickerInputGUI::class,
                 self::PROPERTY_REQUIRED => true,
                 "setDefaultColor"       => ""
             ],
-            Config::KEY_COLOR_MEMBER_FONT       => [
+            self::KEY_COLOR_MEMBER_FONT       => [
                 self::PROPERTY_CLASS    => ilColorPickerInputGUI::class,
                 self::PROPERTY_REQUIRED => true,
                 "setDefaultColor"       => ""
@@ -120,7 +126,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                Config::setField($key, $value);
+                self::srCrsMemberGalleryRoleColor()->config()->setField($key, $value);
                 break;
         }
     }

@@ -1,7 +1,7 @@
 <?php
 
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
-use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigFormGUI;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
@@ -115,16 +115,16 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
     {
         switch (true) {
             case $members->isAdmin($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_ADMIN_BACKGROUND);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getField(ConfigFormGUI::KEY_COLOR_ADMIN_BACKGROUND);
                 break;
 
             case $members->isTutor($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_TUTOR_BACKGROUND);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getField(ConfigFormGUI::KEY_COLOR_TUTOR_BACKGROUND);
                 break;
 
             case $members->isMember($user_id):
             default:
-                $color = "#" . Config::getField(Config::KEY_COLOR_MEMBER_BACKGROUND);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getField(ConfigFormGUI::KEY_COLOR_MEMBER_BACKGROUND);
                 break;
         }
 
@@ -142,16 +142,16 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
     {
         switch (true) {
             case $members->isAdmin($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_ADMIN_FONT);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getField(ConfigFormGUI::KEY_COLOR_ADMIN_FONT);
                 break;
 
             case $members->isTutor($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_TUTOR_FONT);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getField(ConfigFormGUI::KEY_COLOR_TUTOR_FONT);
                 break;
 
             case $members->isMember($user_id):
             default:
-                $color = "#" . Config::getField(Config::KEY_COLOR_MEMBER_FONT);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getField(ConfigFormGUI::KEY_COLOR_MEMBER_FONT);
                 break;
         }
 

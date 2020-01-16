@@ -3,8 +3,11 @@
 namespace srag\Plugins\SrCrsMemberGalleryRoleColor;
 
 use ilSrCrsMemberGalleryRoleColorPlugin;
+use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config\Config;
+use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config\Repository as ConfigRepository;
+use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Utils\ConfigTrait;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
-use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigFormGUI;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
@@ -19,6 +22,9 @@ final class Repository
 
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
+    use ConfigTrait {
+        config as protected _config;
+    }
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     /**
      * @var self
@@ -44,7 +50,23 @@ final class Repository
      */
     private function __construct()
     {
+        $this->config()->withTableName("ui_uihk_crsmgrc_config")->withFields([
+            ConfigFormGUI::KEY_COLOR_ADMIN_BACKGROUND  => Config::TYPE_STRING,
+            ConfigFormGUI::KEY_COLOR_ADMIN_FONT        => Config::TYPE_STRING,
+            ConfigFormGUI::KEY_COLOR_TUTOR_BACKGROUND  => Config::TYPE_STRING,
+            ConfigFormGUI::KEY_COLOR_TUTOR_FONT        => Config::TYPE_STRING,
+            ConfigFormGUI::KEY_COLOR_MEMBER_BACKGROUND => Config::TYPE_STRING,
+            ConfigFormGUI::KEY_COLOR_MEMBER_FONT       => Config::TYPE_STRING
+        ]);
+    }
 
+
+    /**
+     * @inheritDoc
+     */
+    public function config() : ConfigRepository
+    {
+        return self::_config();
     }
 
 
@@ -53,7 +75,7 @@ final class Repository
      */
     public function dropTables()/*:void*/
     {
-        self::dic()->database()->dropTable(Config::TABLE_NAME, false);
+        $this->config()->dropTables();
     }
 
 
@@ -62,6 +84,6 @@ final class Repository
      */
     public function installTables()/*:void*/
     {
-        Config::updateDB();
+        $this->config()->installTables();
     }
 }
