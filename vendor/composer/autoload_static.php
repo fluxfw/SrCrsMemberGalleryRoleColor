@@ -14,7 +14,7 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 37,
             'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 49,
-            'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 52,
+            'srag\\ActiveRecordConfig\\' => 24,
         ),
     );
 
@@ -39,7 +39,7 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
-        'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\ActiveRecordConfig\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/activerecordconfig/src',
         ),
@@ -54,7 +54,11 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\ActiveRecordConfigGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigGUI.php',
         'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\ActiveRecordConfigTableGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigTableGUI.php',
         'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\ActiveRecordObjectFormGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordObjectFormGUI.php',
+        'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\Config\\Config' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/Config.php',
+        'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\Config\\Factory' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/Factory.php',
+        'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\Config\\Repository' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/Repository.php',
         'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\Exception\\ActiveRecordConfigException' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Exception/ActiveRecordConfigException.php',
+        'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\Utils\\ConfigTrait' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Utils/ConfigTrait.php',
         'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\CheckboxInputGUI\\CheckboxInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/CheckboxInputGUI/CheckboxInputGUI.php',
         'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\CustomInputGUIs' => __DIR__ . '/..' . '/srag/custominputguis/src/CustomInputGUIs.php',
         'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\CustomInputGUIsTrait' => __DIR__ . '/..' . '/srag/custominputguis/src/CustomInputGUIsTrait.php',
