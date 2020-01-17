@@ -1,23 +1,22 @@
 <?php
 
-namespace srag\Plugins\SrCrsMemberGalleryRoleColor;
+namespace srag\Plugins\SrCrsMemberGalleryRoleColor\Config;
 
+use ilSrCrsMemberGalleryRoleColorConfigGUI;
 use ilSrCrsMemberGalleryRoleColorPlugin;
-use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
-use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Repository as ConfigRepository;
+use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config\AbstractFactory;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
- * Class Repository
+ * Class Factory
  *
- * @package srag\Plugins\SrCrsMemberGalleryRoleColor
+ * @package srag\Plugins\SrCrsMemberGalleryRoleColor\Config
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Repository
+final class Factory extends AbstractFactory
 {
 
-    use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     /**
@@ -40,37 +39,23 @@ final class Repository
 
 
     /**
-     * Repository constructor
+     * Factory constructor
      */
     private function __construct()
     {
-
+        parent::__construct();
     }
 
 
     /**
-     * @return ConfigRepository
-     */
-    public function config() : ConfigRepository
-    {
-        return ConfigRepository::getInstance();
-    }
-
-
-    /**
+     * @param ilSrCrsMemberGalleryRoleColorConfigGUI $parent
      *
+     * @return ConfigFormGUI
      */
-    public function dropTables()/*:void*/
+    public function newFormInstance(ilSrCrsMemberGalleryRoleColorConfigGUI $parent) : ConfigFormGUI
     {
-        $this->config()->dropTables();
-    }
+        $form = new ConfigFormGUI($parent);
 
-
-    /**
-     *
-     */
-    public function installTables()/*:void*/
-    {
-        $this->config()->installTables();
+        return $form;
     }
 }

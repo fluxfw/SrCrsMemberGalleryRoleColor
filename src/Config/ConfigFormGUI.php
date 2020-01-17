@@ -47,7 +47,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                return self::srCrsMemberGalleryRoleColor()->config()->getField($key);
+                return self::srCrsMemberGalleryRoleColor()->config()->getValue($key);
         }
     }
 
@@ -126,7 +126,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                self::srCrsMemberGalleryRoleColor()->config()->setField($key, $value);
+                self::srCrsMemberGalleryRoleColor()->config()->setValue($key, $value);
                 break;
         }
     }

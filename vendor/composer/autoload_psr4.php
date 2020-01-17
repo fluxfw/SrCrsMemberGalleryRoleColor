@@ -11,5 +11,5 @@ return array(
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/dic/src'),
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/custominputguis/src'),
-    'srag\\ActiveRecordConfig\\' => array($vendorDir . '/srag/activerecordconfig/src'),
+    'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/activerecordconfig/src'),
 );
