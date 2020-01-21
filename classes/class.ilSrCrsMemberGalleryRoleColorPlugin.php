@@ -2,7 +2,6 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\SrCrsMemberGalleryRoleColor\Util\LibraryLanguageInstaller;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 use srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor\PluginUninstallTrait;
 
@@ -63,8 +62,7 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
     {
         parent::updateLanguages($a_lang_keys);
 
-        LibraryLanguageInstaller::getInstance()->withPlugin(self::plugin())->withLibraryLanguageDirectory(__DIR__
-            . "/../vendor/srag/removeplugindataconfirm/lang")->updateLanguages();
+        $this->installRemovePluginDataConfirmLanguages();
     }
 
 

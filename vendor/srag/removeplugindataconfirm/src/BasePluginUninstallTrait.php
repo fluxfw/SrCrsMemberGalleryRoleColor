@@ -4,6 +4,7 @@ namespace srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor;
 
 use ilUIPluginRouterGUI;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
+use srag\DIC\SrCrsMemberGalleryRoleColor\Util\LibraryLanguageInstaller;
 
 /**
  * Trait BasePluginUninstallTrait
@@ -53,6 +54,16 @@ trait BasePluginUninstallTrait
         }
 
         return true;
+    }
+
+
+    /**
+     *
+     */
+    protected function installRemovePluginDataConfirmLanguages()/*:void*/
+    {
+        LibraryLanguageInstaller::getInstance()->withPlugin(self::plugin())->withLibraryLanguageDirectory(__DIR__
+            . "/../lang")->updateLanguages();
     }
 
 
