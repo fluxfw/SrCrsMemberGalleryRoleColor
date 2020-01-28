@@ -75,8 +75,8 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
                         $role_html_pos = stripos($html, "</dl></div>");
                         if ($role_html_pos !== false) {
                             $role_tpl = self::plugin()->template("role.html");
-                            $role_tpl->setVariable("ROLE_TITLE", self::dic()->language()->txt("role") . ":");
-                            $role_tpl->setVariable("ROLE", $role);
+                            $role_tpl->setVariableEscaped("ROLE_TITLE", self::dic()->language()->txt("role") . ":");
+                            $role_tpl->setVariableEscaped("ROLE", $role);
                             $html = substr($html, 0, ($role_html_pos - 1)) . self::output()->getHTML($role_tpl) . substr($html, $role_html_pos);
                         }
 
@@ -84,8 +84,8 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
                         $role_color_background = $this->getRoleColorBackground($user_id, $container->getMembersObject());
                         $role_color_font = $this->getRoleColorFont($user_id, $container->getMembersObject());
                         $role_color_tpl = self::plugin()->template("role_color.html");
-                        $role_color_tpl->setVariable("BACKGROUND_COLOR", $role_color_background);
-                        $role_color_tpl->setVariable("FONT_COLOR", $role_color_font);
+                        $role_color_tpl->setVariableEscaped("BACKGROUND_COLOR", $role_color_background);
+                        $role_color_tpl->setVariableEscaped("FONT_COLOR", $role_color_font);
                         $role_color_tpl_html = self::output()->getHTML($role_color_tpl);
                         $html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
 
