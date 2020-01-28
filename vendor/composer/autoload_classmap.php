@@ -40,6 +40,7 @@ return array(
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\MultiLineNewInputGUI\\MultiLineNewInputGUI' => $vendorDir . '/srag/custominputguis/src/MultiLineNewInputGUI/MultiLineNewInputGUI.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\MultiSelectSearchInputGUI\\MultiSelectSearchInput2GUI' => $vendorDir . '/srag/custominputguis/src/MultiSelectSearchInputGUI/MultiSelectSearchInput2GUI.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\MultiSelectSearchInputGUI\\MultiSelectSearchInputGUI' => $vendorDir . '/srag/custominputguis/src/MultiSelectSearchInputGUI/MultiSelectSearchInputGUI.php',
+    'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\MultiSelectSearchNewInputGUI\\MultiSelectSearchNewInputGUI' => $vendorDir . '/srag/custominputguis/src/MultiSelectSearchNewInputGUI/MultiSelectSearchNewInputGUI.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\NumberInputGUI\\NumberInputGUI' => $vendorDir . '/srag/custominputguis/src/NumberInputGUI/NumberInputGUI.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\PieChart\\Component\\LegendEntry' => $vendorDir . '/srag/custominputguis/src/PieChart/Component/LegendEntry.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\PieChart\\Component\\PieChart' => $vendorDir . '/srag/custominputguis/src/PieChart/Component/PieChart.php',
