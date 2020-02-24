@@ -21,7 +21,7 @@ final class Repository
     use SrCrsMemberGalleryRoleColorTrait;
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     /**
-     * @var self
+     * @var self|null
      */
     protected static $instance = null;
 
