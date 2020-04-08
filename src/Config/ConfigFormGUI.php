@@ -3,7 +3,6 @@
 namespace srag\Plugins\SrCrsMemberGalleryRoleColor\Config;
 
 use ilColorPickerInputGUI;
-use ilSrCrsMemberGalleryRoleColorConfigGUI;
 use ilSrCrsMemberGalleryRoleColorPlugin;
 use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\PropertyFormGUI\PropertyFormGUI;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
@@ -26,15 +25,15 @@ class ConfigFormGUI extends PropertyFormGUI
     const KEY_COLOR_TUTOR_FONT = "color_tutor_font";
     const KEY_COLOR_MEMBER_BACKGROUND = "color_member_background";
     const KEY_COLOR_MEMBER_FONT = "color_member_font";
-    const LANG_MODULE = ilSrCrsMemberGalleryRoleColorConfigGUI::LANG_MODULE;
+    const LANG_MODULE = ConfigCtrl::LANG_MODULE;
 
 
     /**
      * ConfigFormGUI constructor
      *
-     * @param ilSrCrsMemberGalleryRoleColorConfigGUI $parent
+     * @param ConfigCtrl $parent
      */
-    public function __construct(ilSrCrsMemberGalleryRoleColorConfigGUI $parent)
+    public function __construct(ConfigCtrl $parent)
     {
         parent::__construct($parent);
     }
@@ -57,7 +56,7 @@ class ConfigFormGUI extends PropertyFormGUI
      */
     protected function initCommands()/*: void*/
     {
-        $this->addCommandButton(ilSrCrsMemberGalleryRoleColorConfigGUI::CMD_UPDATE_CONFIGURE, $this->txt("save"));
+        $this->addCommandButton(ConfigCtrl::CMD_UPDATE_CONFIGURE, $this->txt("save"));
     }
 
 

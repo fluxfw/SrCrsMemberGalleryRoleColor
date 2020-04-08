@@ -2,7 +2,6 @@
 
 namespace srag\Plugins\SrCrsMemberGalleryRoleColor\Config;
 
-use ilSrCrsMemberGalleryRoleColorConfigGUI;
 use ilSrCrsMemberGalleryRoleColorPlugin;
 use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config\AbstractFactory;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
@@ -48,11 +47,11 @@ final class Factory extends AbstractFactory
 
 
     /**
-     * @param ilSrCrsMemberGalleryRoleColorConfigGUI $parent
+     * @param ConfigCtrl $parent
      *
      * @return ConfigFormGUI
      */
-    public function newFormInstance(ilSrCrsMemberGalleryRoleColorConfigGUI $parent) : ConfigFormGUI
+    public function newFormInstance(ConfigCtrl $parent) : ConfigFormGUI
     {
         $form = new ConfigFormGUI($parent);
 

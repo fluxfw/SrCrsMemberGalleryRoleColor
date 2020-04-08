@@ -110,6 +110,7 @@ return array(
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\VersionInterface' => $vendorDir . '/srag/dic/src/Version/VersionInterface.php',
     'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => $vendorDir . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
     'srag\\LibrariesNamespaceChanger\\PHP7Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
+    'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigCtrl' => $baseDir . '/src/Config/class.ConfigCtrl.php',
     'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigFormGUI' => $baseDir . '/src/Config/ConfigFormGUI.php',
     'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Factory' => $baseDir . '/src/Config/Factory.php',
     'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Repository' => $baseDir . '/src/Config/Repository.php',
