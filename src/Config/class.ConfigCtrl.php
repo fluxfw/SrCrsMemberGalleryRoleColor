@@ -21,6 +21,7 @@ class ConfigCtrl
 
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
+
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CMD_CONFIGURE = "configure";
     const CMD_UPDATE_CONFIGURE = "updateConfigure";

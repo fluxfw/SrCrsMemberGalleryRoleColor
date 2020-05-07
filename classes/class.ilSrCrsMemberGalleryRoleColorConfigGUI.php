@@ -16,6 +16,7 @@ class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
 
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
+
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CMD_CONFIGURE = "configure";
 

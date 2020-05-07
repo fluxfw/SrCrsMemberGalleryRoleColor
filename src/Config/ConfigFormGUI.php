@@ -18,6 +18,7 @@ class ConfigFormGUI extends PropertyFormGUI
 {
 
     use SrCrsMemberGalleryRoleColorTrait;
+
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const KEY_COLOR_ADMIN_BACKGROUND = "color_admin_background";
     const KEY_COLOR_ADMIN_FONT = "color_admin_font";

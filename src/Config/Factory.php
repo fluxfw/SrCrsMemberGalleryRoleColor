@@ -17,6 +17,7 @@ final class Factory extends AbstractFactory
 {
 
     use SrCrsMemberGalleryRoleColorTrait;
+
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     /**
      * @var self|null

@@ -19,6 +19,7 @@ final class Repository
 
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
+
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     /**
      * @var self|null
