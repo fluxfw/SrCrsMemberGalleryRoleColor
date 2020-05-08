@@ -1,1 +1,1 @@
-## SrCrsMemberGalleryRoleColor Documentation
+# SrCrsMemberGalleryRoleColor ILIAS Plugin Documentation
