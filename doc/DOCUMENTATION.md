@@ -1,0 +1,1 @@
+## SrCrsMemberGalleryRoleColor Documentation
