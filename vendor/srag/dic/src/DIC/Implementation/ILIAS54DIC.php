@@ -23,6 +23,7 @@ use ILIAS\DI\BackgroundTaskServices;
 use ILIAS\DI\Container;
 use ILIAS\DI\HTTPServices;
 use ILIAS\DI\LoggingServices;
+use ILIAS\DI\RBACServices;
 use ILIAS\DI\UIServices;
 use ILIAS\Filesystem\Filesystems;
 use ILIAS\FileUpload\FileUpload;
@@ -415,27 +416,42 @@ final class ILIAS54DIC extends AbstractDIC
     /**
      * @inheritDoc
      */
-    public function rbacadmin() : ilRbacAdmin
+    public function rbac() : RBACServices
     {
-        return $this->dic->rbac()->admin();
+        return $this->dic->rbac();
     }
 
 
     /**
      * @inheritDoc
+     *
+     * @deprecated Please use `self::dic()->rba()->admin()`
+     */
+    public function rbacadmin() : ilRbacAdmin
+    {
+        return $this->rbac()->admin();
+    }
+
+
+    /**
+     * @inheritDoc
+     *
+     * @deprecated Please use `self::dic()->rba()->review()`
      */
     public function rbacreview() : ilRbacReview
     {
-        return $this->dic->rbac()->review();
+        return $this->rbac()->review();
     }
 
 
     /**
      * @inheritDoc
+     *
+     * @deprecated Please use `self::dic()->rba()->system()`
      */
     public function rbacsystem() : ilRbacSystem
     {
-        return $this->dic->rbac()->system();
+        return $this->rbac()->system();
     }
 
 
@@ -445,6 +461,15 @@ final class ILIAS54DIC extends AbstractDIC
     public function refinery() : RefineryFactory
     {
         throw new DICException("RefineryFactory not exists in ILIAS 5.4 or below!");
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function repositoryTree() : ilTree
+    {
+        return $this->dic->repositoryTree();
     }
 
 
@@ -504,10 +529,12 @@ final class ILIAS54DIC extends AbstractDIC
 
     /**
      * @inheritDoc
+     *
+     * @deprecated Please use `self::dic()->repositoryTree()`
      */
     public function tree() : ilTree
     {
-        return $this->dic->repositoryTree();
+        return $this->repositoryTree();
     }
 
 
