@@ -29,6 +29,7 @@ return array(
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\FormBuilder\\FormBuilder' => $vendorDir . '/srag/custominputguis/src/FormBuilder/FormBuilder.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\GlyphGUI\\GlyphGUI' => $vendorDir . '/srag/custominputguis/src/GlyphGUI/GlyphGUI.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\HiddenInputGUI\\HiddenInputGUI' => $vendorDir . '/srag/custominputguis/src/HiddenInputGUI/HiddenInputGUI.php',
+    'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\InputGUIWrapperUIInputComponent\\AbstractRenderer' => $vendorDir . '/srag/custominputguis/src/InputGUIWrapperUIInputComponent/Renderer.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\InputGUIWrapperUIInputComponent\\InputGUIWrapperConstraint' => $vendorDir . '/srag/custominputguis/src/InputGUIWrapperUIInputComponent/InputGUIWrapperConstraint.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\InputGUIWrapperUIInputComponent\\InputGUIWrapperConstraint54' => $vendorDir . '/srag/custominputguis/src/InputGUIWrapperUIInputComponent/InputGUIWrapperConstraint54.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\InputGUIWrapperUIInputComponent\\InputGUIWrapperConstraintTrait' => $vendorDir . '/srag/custominputguis/src/InputGUIWrapperUIInputComponent/InputGUIWrapperConstraintTrait.php',
