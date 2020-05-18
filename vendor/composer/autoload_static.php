@@ -13,7 +13,7 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
             'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\' => 41,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 37,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 49,
             'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 52,
         ),
     );
@@ -35,7 +35,7 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
@@ -161,8 +161,8 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigCtrl' => __DIR__ . '/../..' . '/src/Config/class.ConfigCtrl.php',
-        'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigFormGUI' => __DIR__ . '/../..' . '/src/Config/ConfigFormGUI.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Factory' => __DIR__ . '/../..' . '/src/Config/Factory.php',
+        'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Form\\FormBuilder' => __DIR__ . '/../..' . '/src/Config/Form/FormBuilder.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Repository' => __DIR__ . '/../..' . '/src/Config/Repository.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Repository' => __DIR__ . '/../..' . '/src/Repository.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Utils\\SrCrsMemberGalleryRoleColorTrait' => __DIR__ . '/../..' . '/src/Utils/SrCrsMemberGalleryRoleColorTrait.php',

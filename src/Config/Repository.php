@@ -6,6 +6,7 @@ use ilSrCrsMemberGalleryRoleColorPlugin;
 use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config\AbstractFactory;
 use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config\AbstractRepository;
 use srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config\Config;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Form\FormBuilder;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
@@ -75,12 +76,12 @@ final class Repository extends AbstractRepository
     protected function getFields() : array
     {
         return [
-            ConfigFormGUI::KEY_COLOR_ADMIN_BACKGROUND  => Config::TYPE_STRING,
-            ConfigFormGUI::KEY_COLOR_ADMIN_FONT        => Config::TYPE_STRING,
-            ConfigFormGUI::KEY_COLOR_TUTOR_BACKGROUND  => Config::TYPE_STRING,
-            ConfigFormGUI::KEY_COLOR_TUTOR_FONT        => Config::TYPE_STRING,
-            ConfigFormGUI::KEY_COLOR_MEMBER_BACKGROUND => Config::TYPE_STRING,
-            ConfigFormGUI::KEY_COLOR_MEMBER_FONT       => Config::TYPE_STRING
+            FormBuilder::KEY_COLOR_ADMIN_BACKGROUND  => Config::TYPE_STRING,
+            FormBuilder::KEY_COLOR_ADMIN_FONT        => Config::TYPE_STRING,
+            FormBuilder::KEY_COLOR_TUTOR_BACKGROUND  => Config::TYPE_STRING,
+            FormBuilder::KEY_COLOR_TUTOR_FONT        => Config::TYPE_STRING,
+            FormBuilder::KEY_COLOR_MEMBER_BACKGROUND => Config::TYPE_STRING,
+            FormBuilder::KEY_COLOR_MEMBER_FONT       => Config::TYPE_STRING
         ];
     }
 }
