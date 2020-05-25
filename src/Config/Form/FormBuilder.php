@@ -2,8 +2,8 @@
 
 namespace srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Form;
 
-use ilColorPickerInputGUI;
 use ilSrCrsMemberGalleryRoleColorPlugin;
+use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\ColorPickerInputGUI\ColorPickerInputGUI;
 use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\FormBuilder\AbstractFormBuilder;
 use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\InputGUIWrapperUIInputComponent\InputGUIWrapperUIInputComponent;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigCtrl;
@@ -78,17 +78,17 @@ class FormBuilder extends AbstractFormBuilder
     protected function getFields() : array
     {
         $fields = [
-            self::KEY_COLOR_ADMIN_BACKGROUND  => (new InputGUIWrapperUIInputComponent(new ilColorPickerInputGUI(self::plugin()
+            self::KEY_COLOR_ADMIN_BACKGROUND  => (new InputGUIWrapperUIInputComponent(new ColorPickerInputGUI(self::plugin()
                 ->translate(self::KEY_COLOR_ADMIN_BACKGROUND, ConfigCtrl::LANG_MODULE))))->withRequired(true),
-            self::KEY_COLOR_ADMIN_FONT        => (new InputGUIWrapperUIInputComponent(new ilColorPickerInputGUI(self::plugin()
+            self::KEY_COLOR_ADMIN_FONT        => (new InputGUIWrapperUIInputComponent(new ColorPickerInputGUI(self::plugin()
                 ->translate(self::KEY_COLOR_ADMIN_FONT, ConfigCtrl::LANG_MODULE))))->withRequired(true),
-            self::KEY_COLOR_MEMBER_BACKGROUND => (new InputGUIWrapperUIInputComponent(new ilColorPickerInputGUI(self::plugin()
+            self::KEY_COLOR_MEMBER_BACKGROUND => (new InputGUIWrapperUIInputComponent(new ColorPickerInputGUI(self::plugin()
                 ->translate(self::KEY_COLOR_MEMBER_BACKGROUND, ConfigCtrl::LANG_MODULE))))->withRequired(true),
-            self::KEY_COLOR_MEMBER_FONT       => (new InputGUIWrapperUIInputComponent(new ilColorPickerInputGUI(self::plugin()
+            self::KEY_COLOR_MEMBER_FONT       => (new InputGUIWrapperUIInputComponent(new ColorPickerInputGUI(self::plugin()
                 ->translate(self::KEY_COLOR_MEMBER_FONT, ConfigCtrl::LANG_MODULE))))->withRequired(true),
-            self::KEY_COLOR_TUTOR_BACKGROUND  => (new InputGUIWrapperUIInputComponent(new ilColorPickerInputGUI(self::plugin()
+            self::KEY_COLOR_TUTOR_BACKGROUND  => (new InputGUIWrapperUIInputComponent(new ColorPickerInputGUI(self::plugin()
                 ->translate(self::KEY_COLOR_TUTOR_BACKGROUND, ConfigCtrl::LANG_MODULE))))->withRequired(true),
-            self::KEY_COLOR_TUTOR_FONT        => (new InputGUIWrapperUIInputComponent(new ilColorPickerInputGUI(self::plugin()
+            self::KEY_COLOR_TUTOR_FONT        => (new InputGUIWrapperUIInputComponent(new ColorPickerInputGUI(self::plugin()
                 ->translate(self::KEY_COLOR_TUTOR_FONT, ConfigCtrl::LANG_MODULE))))->withRequired(true)
         ];
 
