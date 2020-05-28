@@ -2,6 +2,8 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
+use ILIAS\DI\Container;
+use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\Loader\CustomInputGUIsLoaderDetector;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 use srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor\PluginUninstallTrait;
 
@@ -73,5 +75,14 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
     protected function deleteData()/*: void*/
     {
         self::srCrsMemberGalleryRoleColor()->dropTables();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
+    {
+        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
     }
 }
