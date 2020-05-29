@@ -2,8 +2,8 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\SrCrsMemberGalleryRoleColor\Util\LibraryLanguageInstaller;
-use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config;
+use ILIAS\DI\Container;
+use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\Loader\CustomInputGUIsLoaderDetector;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 use srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor\PluginUninstallTrait;
 
@@ -17,6 +17,7 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
 
     use PluginUninstallTrait;
     use SrCrsMemberGalleryRoleColorTrait;
+
     const PLUGIN_ID = "srcrsmgrc";
     const PLUGIN_NAME = "SrCrsMemberGalleryRoleColor";
     const PLUGIN_CLASS_NAME = self::class;
@@ -49,7 +50,7 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
 
 
     /**
-     * @return string
+     * @inheritDoc
      */
     public function getPluginName() : string
     {
@@ -58,22 +59,30 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
-    public function updateLanguages($a_lang_keys = null)
+    public function updateLanguages(/*?array*/ $a_lang_keys = null)/*:void*/
     {
         parent::updateLanguages($a_lang_keys);
 
-        LibraryLanguageInstaller::getInstance()->withPlugin(self::plugin())->withLibraryLanguageDirectory(__DIR__
-            . "/../vendor/srag/removeplugindataconfirm/lang")->updateLanguages();
+        $this->installRemovePluginDataConfirmLanguages();
     }
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     protected function deleteData()/*: void*/
     {
-        self::dic()->database()->dropTable(Config::TABLE_NAME, false);
+        self::srCrsMemberGalleryRoleColor()->dropTables();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
+    {
+        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
     }
 }

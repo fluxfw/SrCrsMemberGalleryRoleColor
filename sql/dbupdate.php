@@ -1,4 +1,4 @@
 <#1>
 <?php
-\srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config::updateDB();
+\srag\Plugins\SrCrsMemberGalleryRoleColor\Repository::getInstance()->installTables();
 ?>

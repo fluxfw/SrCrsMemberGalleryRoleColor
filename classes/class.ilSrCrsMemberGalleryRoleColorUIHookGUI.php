@@ -1,7 +1,8 @@
 <?php
 
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
-use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Config;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigFormGUI;
+use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Form\FormBuilder;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
 /**
@@ -14,6 +15,7 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
 
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
+
     const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CARD_TEMPLATE_ID = "src/UI/templates/default/Card/tpl.card.html";
     const TEMPLATE_GET = "template_get";
@@ -31,17 +33,10 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
 
 
     /**
-     * @param string $a_comp
-     * @param string $a_part
-     * @param array  $a_par
-     *
-     * @return array
+     * @inheritDoc
      */
-    public function getHTML(/*string*/
-        $a_comp, /*string*/
-        $a_part, /*array*/
-        $a_par = []
-    ) : array {
+    public function getHTML(/*string*/ $a_comp, /*string*/ $a_part, /*array*/ $a_par = []) : array
+    {
 
         if (self::dic()->ctrl()->getCmdClass() === strtolower(ilUsersGalleryGUI::class)
             && (empty(self::dic()->ctrl()->getCmd()) || self::dic()->ctrl()->getCmd() === "view")
@@ -82,8 +77,8 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
                         $role_html_pos = stripos($html, "</dl></div>");
                         if ($role_html_pos !== false) {
                             $role_tpl = self::plugin()->template("role.html");
-                            $role_tpl->setVariable("ROLE_TITLE", self::dic()->language()->txt("role") . ":");
-                            $role_tpl->setVariable("ROLE", $role);
+                            $role_tpl->setVariableEscaped("ROLE_TITLE", self::dic()->language()->txt("role") . ":");
+                            $role_tpl->setVariableEscaped("ROLE", $role);
                             $html = substr($html, 0, ($role_html_pos - 1)) . self::output()->getHTML($role_tpl) . substr($html, $role_html_pos);
                         }
 
@@ -91,8 +86,8 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
                         $role_color_background = $this->getRoleColorBackground($user_id, $container->getMembersObject());
                         $role_color_font = $this->getRoleColorFont($user_id, $container->getMembersObject());
                         $role_color_tpl = self::plugin()->template("role_color.html");
-                        $role_color_tpl->setVariable("BACKGROUND_COLOR", $role_color_background);
-                        $role_color_tpl->setVariable("FONT_COLOR", $role_color_font);
+                        $role_color_tpl->setVariableEscaped("BACKGROUND_COLOR", $role_color_background);
+                        $role_color_tpl->setVariableEscaped("FONT_COLOR", $role_color_font);
                         $role_color_tpl_html = self::output()->getHTML($role_color_tpl);
                         $html = str_replace('<div class="caption">', $role_color_tpl_html, $html);
 
@@ -122,16 +117,16 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
     {
         switch (true) {
             case $members->isAdmin($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_ADMIN_BACKGROUND);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getValue(FormBuilder::KEY_COLOR_ADMIN_BACKGROUND);
                 break;
 
             case $members->isTutor($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_TUTOR_BACKGROUND);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getValue(FormBuilder::KEY_COLOR_TUTOR_BACKGROUND);
                 break;
 
             case $members->isMember($user_id):
             default:
-                $color = "#" . Config::getField(Config::KEY_COLOR_MEMBER_BACKGROUND);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getValue(FormBuilder::KEY_COLOR_MEMBER_BACKGROUND);
                 break;
         }
 
@@ -149,16 +144,16 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
     {
         switch (true) {
             case $members->isAdmin($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_ADMIN_FONT);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getValue(FormBuilder::KEY_COLOR_ADMIN_FONT);
                 break;
 
             case $members->isTutor($user_id):
-                $color = "#" . Config::getField(Config::KEY_COLOR_TUTOR_FONT);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getValue(FormBuilder::KEY_COLOR_TUTOR_FONT);
                 break;
 
             case $members->isMember($user_id):
             default:
-                $color = "#" . Config::getField(Config::KEY_COLOR_MEMBER_FONT);
+                $color = "#" . self::srCrsMemberGalleryRoleColor()->config()->getValue(FormBuilder::KEY_COLOR_MEMBER_FONT);
                 break;
         }
 
