@@ -17,8 +17,8 @@ class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
 
-    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CMD_CONFIGURE = "configure";
+    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
 
 
     /**
@@ -63,19 +63,19 @@ class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
     /**
      *
      */
-    protected function setTabs()/*: void*/
+    protected function configure()/*: void*/
     {
-        ConfigCtrl::addTabs();
-
-        self::dic()->locator()->addItem(ilSrCrsMemberGalleryRoleColorPlugin::PLUGIN_NAME, self::dic()->ctrl()->getLinkTarget($this, self::CMD_CONFIGURE));
+        self::dic()->ctrl()->redirectByClass(ConfigCtrl::class, ConfigCtrl::CMD_CONFIGURE);
     }
 
 
     /**
      *
      */
-    protected function configure()/*: void*/
+    protected function setTabs()/*: void*/
     {
-        self::dic()->ctrl()->redirectByClass(ConfigCtrl::class, ConfigCtrl::CMD_CONFIGURE);
+        ConfigCtrl::addTabs();
+
+        self::dic()->locator()->addItem(ilSrCrsMemberGalleryRoleColorPlugin::PLUGIN_NAME, self::dic()->ctrl()->getLinkTarget($this, self::CMD_CONFIGURE));
     }
 }

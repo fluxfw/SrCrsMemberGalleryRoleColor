@@ -21,13 +21,13 @@ class FormBuilder extends AbstractFormBuilder
 
     use SrCrsMemberGalleryRoleColorTrait;
 
-    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const KEY_COLOR_ADMIN_BACKGROUND = "color_admin_background";
     const KEY_COLOR_ADMIN_FONT = "color_admin_font";
-    const KEY_COLOR_TUTOR_BACKGROUND = "color_tutor_background";
-    const KEY_COLOR_TUTOR_FONT = "color_tutor_font";
     const KEY_COLOR_MEMBER_BACKGROUND = "color_member_background";
     const KEY_COLOR_MEMBER_FONT = "color_member_font";
+    const KEY_COLOR_TUTOR_BACKGROUND = "color_tutor_background";
+    const KEY_COLOR_TUTOR_FONT = "color_tutor_font";
+    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
 
 
     /**

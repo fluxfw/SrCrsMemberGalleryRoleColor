@@ -29,6 +29,15 @@ final class Repository extends AbstractRepository
 
 
     /**
+     * Repository constructor
+     */
+    protected function __construct()
+    {
+        parent::__construct();
+    }
+
+
+    /**
      * @return self
      */
     public static function getInstance() : self
@@ -38,15 +47,6 @@ final class Repository extends AbstractRepository
         }
 
         return self::$instance;
-    }
-
-
-    /**
-     * Repository constructor
-     */
-    protected function __construct()
-    {
-        parent::__construct();
     }
 
 
@@ -64,15 +64,6 @@ final class Repository extends AbstractRepository
     /**
      * @inheritDoc
      */
-    protected function getTableName() : string
-    {
-        return "ui_uihk_crsmgrc_config";
-    }
-
-
-    /**
-     * @inheritDoc
-     */
     protected function getFields() : array
     {
         return [
@@ -83,5 +74,14 @@ final class Repository extends AbstractRepository
             FormBuilder::KEY_COLOR_MEMBER_BACKGROUND => Config::TYPE_STRING,
             FormBuilder::KEY_COLOR_MEMBER_FONT       => Config::TYPE_STRING
         ];
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    protected function getTableName() : string
+    {
+        return "ui_uihk_crsmgrc_config";
     }
 }
