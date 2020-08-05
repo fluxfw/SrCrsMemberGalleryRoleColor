@@ -10,6 +10,6 @@ return array(
     'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\' => array($baseDir . '/src'),
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/dic/src'),
-    'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/custominputguis/src'),
+    'srag\\CustomInputGUIs\\' => array($vendorDir . '/srag/custominputguis/src'),
     'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/activerecordconfig/src'),
 );
