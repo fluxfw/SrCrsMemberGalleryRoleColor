@@ -13,17 +13,17 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\' => 57,
+            'srag\\RemovePluginDataConfirm\\' => 29,
             'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\' => 41,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 37,
-            'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 49,
+            'srag\\DIC\\' => 9,
+            'srag\\CustomInputGUIs\\' => 21,
             'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 52,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\RemovePluginDataConfirm\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -35,11 +35,11 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\CustomInputGUIs\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
@@ -125,6 +125,7 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\DatabaseInterface' => __DIR__ . '/..' . '/srag/dic/src/Database/DatabaseInterface.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\PdoContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoContextHelper.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
+        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DevTools\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Output\\Output' => __DIR__ . '/..' . '/srag/dic/src/Output/Output.php',
