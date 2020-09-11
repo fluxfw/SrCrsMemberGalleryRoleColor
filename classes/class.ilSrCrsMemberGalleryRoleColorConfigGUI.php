@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
+use srag\DIC\SrCrsMemberGalleryRoleColor\DevTools\DevToolsCtrl;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigCtrl;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
@@ -9,7 +10,9 @@ use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTr
 /**
  * Class ilSrCrsMemberGalleryRoleColorConfigGUI
  *
- * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
+ * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
+ *
+ * @ilCtrl_isCalledBy srag\DIC\SrCrsMemberGalleryRoleColor\DevTools\DevToolsCtrl: ilSrCrsMemberGalleryRoleColorConfigGUI
  */
 class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
 {
@@ -17,8 +20,8 @@ class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
 
-    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CMD_CONFIGURE = "configure";
+    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
 
 
     /**
@@ -44,6 +47,10 @@ class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
                 self::dic()->ctrl()->forwardCommand(new ConfigCtrl());
                 break;
 
+            case strtolower(DevToolsCtrl::class):
+                self::dic()->ctrl()->forwardCommand(new DevToolsCtrl($this, self::plugin()));
+                break;
+
             default:
                 $cmd = self::dic()->ctrl()->getCmd();
 
@@ -63,19 +70,21 @@ class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
     /**
      *
      */
-    protected function setTabs()/*: void*/
+    protected function configure()/*: void*/
     {
-        ConfigCtrl::addTabs();
-
-        self::dic()->locator()->addItem(ilSrCrsMemberGalleryRoleColorPlugin::PLUGIN_NAME, self::dic()->ctrl()->getLinkTarget($this, self::CMD_CONFIGURE));
+        self::dic()->ctrl()->redirectByClass(ConfigCtrl::class, ConfigCtrl::CMD_CONFIGURE);
     }
 
 
     /**
      *
      */
-    protected function configure()/*: void*/
+    protected function setTabs()/*: void*/
     {
-        self::dic()->ctrl()->redirectByClass(ConfigCtrl::class, ConfigCtrl::CMD_CONFIGURE);
+        ConfigCtrl::addTabs();
+
+        DevToolsCtrl::addTabs(self::plugin());
+
+        self::dic()->locator()->addItem(ilSrCrsMemberGalleryRoleColorPlugin::PLUGIN_NAME, self::dic()->ctrl()->getLinkTarget($this, self::CMD_CONFIGURE));
     }
 }

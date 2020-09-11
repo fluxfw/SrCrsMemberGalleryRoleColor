@@ -16,11 +16,11 @@ class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
     use DICTrait;
     use SrCrsMemberGalleryRoleColorTrait;
 
-    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
     const CARD_TEMPLATE_ID = "src/UI/templates/default/Card/tpl.card.html";
-    const TEMPLATE_GET = "template_get";
     const OBJECT_TYPE_CRS = "crs";
     const OBJECT_TYPE_GRP = "grp";
+    const PLUGIN_CLASS_NAME = ilSrCrsMemberGalleryRoleColorPlugin::class;
+    const TEMPLATE_GET = "template_get";
 
 
     /**
