@@ -4,26 +4,27 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
+class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
 {
     public static $files = array (
         'b0680d11ae83bc0e0ab979ccbf16047b' => __DIR__ . '/..' . '/srag/dic/src/PHPVersionChecker.php',
+        'b7416639424aee30ac177ef3a41b878a' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\' => 57,
+            'srag\\RemovePluginDataConfirm\\' => 29,
             'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\' => 41,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 37,
-            'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 49,
-            'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 52,
+            'srag\\DIC\\' => 9,
+            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\ActiveRecordConfig\\' => 24,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\RemovePluginDataConfirm\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -35,15 +36,15 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\CustomInputGUIs\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
-        'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\ActiveRecordConfig\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/activerecordconfig/src',
         ),
@@ -127,6 +128,7 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DevTools\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
+        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Ilias7PreWarn' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Output\\Output' => __DIR__ . '/..' . '/srag/dic/src/Output/Output.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Output\\OutputInterface' => __DIR__ . '/..' . '/srag/dic/src/Output/OutputInterface.php',
@@ -158,9 +160,9 @@ class ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit350b6df0a7880df44a8f44b8e6fb956c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd::$classMap;
 
         }, null, ClassLoader::class);
     }
