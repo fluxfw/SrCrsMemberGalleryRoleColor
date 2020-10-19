@@ -1,7 +1,6 @@
 <?php
 
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
-use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigFormGUI;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\Form\FormBuilder;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
 
