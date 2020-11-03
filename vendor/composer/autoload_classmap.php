@@ -94,6 +94,7 @@ return array(
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Util\\LibraryLanguageInstaller' => $vendorDir . '/srag/dic/src/Util/LibraryLanguageInstaller.php',
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\Version' => $vendorDir . '/srag/dic/src/Version/Version.php',
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\VersionInterface' => $vendorDir . '/srag/dic/src/Version/VersionInterface.php',
+    'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\DevToolsCtrl' => $vendorDir . '/srag/devtools/src/class.DevToolsCtrl.php',
     'srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml' => $vendorDir . '/srag/librariesnamespacechanger/src/GeneratePluginPhpAndXml.php',
     'srag\\LibrariesNamespaceChanger\\GeneratePluginReadme' => $vendorDir . '/srag/librariesnamespacechanger/src/GeneratePluginReadme.php',
     'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => $vendorDir . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
