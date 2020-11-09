@@ -1,1 +1,0 @@
-# SrCrsMemberGalleryRoleColor ILIAS Plugin Documentation
