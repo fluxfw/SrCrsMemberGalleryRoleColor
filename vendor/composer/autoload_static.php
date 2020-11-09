@@ -20,7 +20,7 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\' => 59,
             'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\' => 42,
-            'srag\\DIC\\' => 9,
+            'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 37,
             'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 49,
             'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 52,
         ),
@@ -51,7 +51,7 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         array (
             0 => __DIR__ . '/..' . '/srag/devtools/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),

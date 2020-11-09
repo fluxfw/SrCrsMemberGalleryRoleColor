@@ -6,7 +6,7 @@
 
 This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
 
-This project is licensed under the  license
+This project is licensed under the GPL-3.0-only license
 
 ## Installation
 
