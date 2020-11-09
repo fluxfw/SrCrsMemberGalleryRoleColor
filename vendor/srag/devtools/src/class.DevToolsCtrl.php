@@ -9,7 +9,7 @@ use ilPluginConfigGUI;
 use ilUtil;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 use srag\DIC\SrCrsMemberGalleryRoleColor\Plugin\PluginInterface;
-use srag\DIC\SrCrsMemberGalleryRoleColor\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrCrsMemberGalleryRoleColor\LibraryLanguageInstaller;
 
 /**
  * Class DevToolsCtrl

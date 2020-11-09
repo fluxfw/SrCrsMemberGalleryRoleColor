@@ -16,10 +16,11 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         array (
             'srag\\RemovePluginDataConfirm\\SrCrsMemberGalleryRoleColor\\' => 57,
             'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\' => 41,
+            'srag\\LibraryLanguageInstaller\\SrCrsMemberGalleryRoleColor\\' => 58,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\' => 59,
             'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\' => 42,
-            'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 37,
+            'srag\\DIC\\' => 9,
             'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 49,
             'srag\\ActiveRecordConfig\\SrCrsMemberGalleryRoleColor\\' => 52,
         ),
@@ -34,6 +35,10 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'srag\\LibraryLanguageInstaller\\SrCrsMemberGalleryRoleColor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/librarylanguageinstaller/src',
+        ),
         'srag\\LibrariesNamespaceChanger\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
@@ -46,7 +51,7 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         array (
             0 => __DIR__ . '/..' . '/srag/devtools/src',
         ),
-        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 
+        'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
@@ -136,7 +141,6 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\DatabaseInterface' => __DIR__ . '/..' . '/srag/dic/src/Database/DatabaseInterface.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\PdoContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoContextHelper.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
-        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DevTools\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Ilias7PreWarn' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
@@ -146,20 +150,16 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Plugin\\Plugin' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Plugin.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Plugin\\PluginInterface' => __DIR__ . '/..' . '/srag/dic/src/Plugin/PluginInterface.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Plugin\\Pluginable' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Pluginable.php',
-        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Util\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/dic/src/Util/LibraryLanguageInstaller.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/devtools/src/class.DevToolsCtrl.php',
         'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginPhpAndXml.php',
         'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginReadme.php',
-        'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/UpdatePluginReadme.php',
-        'srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginPhpAndXml.php',
-        'srag\\LibrariesNamespaceChanger\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginReadme.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibrariesNamespaceChanger\\PHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP72Backport.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
-        'srag\\LibrariesNamespaceChanger\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/UpdatePluginReadme.php',
+        'srag\\LibraryLanguageInstaller\\SrCrsMemberGalleryRoleColor\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/librarylanguageinstaller/src/LibraryLanguageInstaller.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigCtrl' => __DIR__ . '/../..' . '/src/Config/class.ConfigCtrl.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Factory' => __DIR__ . '/../..' . '/src/Config/Factory.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\Form\\FormBuilder' => __DIR__ . '/../..' . '/src/Config/Form/FormBuilder.php',

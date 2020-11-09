@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\DIC\SrCrsMemberGalleryRoleColor\Util;
+namespace srag\LibraryLanguageInstaller\SrCrsMemberGalleryRoleColor;
 
 use ilDBConstants;
 use ilGlobalCache;
@@ -12,7 +12,7 @@ use srag\DIC\SrCrsMemberGalleryRoleColor\Plugin\PluginInterface;
 /**
  * Class LibraryLanguageInstaller
  *
- * @package srag\DIC\SrCrsMemberGalleryRoleColor\Util
+ * @package srag\LibraryLanguageInstaller\SrCrsMemberGalleryRoleColor
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
