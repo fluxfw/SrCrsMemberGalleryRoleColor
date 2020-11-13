@@ -1,5 +1,5 @@
 {
-  "name": "srag/plugins/srcrsmembergalleryrolecolor",
+  "name": "srag/srcrsmembergalleryrolecolor",
   "description": "",
   "version": "1.2.2",
   "extra": {
@@ -45,7 +45,8 @@
       "srag\\Plugins\\SrCrsMemberGalleryRoleColor\\": "src/"
     },
     "classmap": [
-      "classes/"
+      "classes/",
+      "src/Config/class.ConfigCtrl.php"
     ],
     "files": [
       "vendor/srag/dic/src/PHPVersionChecker.php",
