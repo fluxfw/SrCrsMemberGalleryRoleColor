@@ -129,6 +129,7 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\ViewControlModeUI\\ViewControlModeUI' => __DIR__ . '/..' . '/srag/custominputguis/src/ViewControlModeUI/ViewControlModeUI.php',
         'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\Waiter\\Waiter' => __DIR__ . '/..' . '/srag/custominputguis/src/Waiter/Waiter.php',
         'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\WeekdayInputGUI\\WeekdayInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/WeekdayInputGUI/WeekdayInputGUI.php',
+        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Cron\\FixUITemplateInCronContext' => __DIR__ . '/..' . '/srag/dic/src/Cron/FixUITemplateInCronContext.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DICStatic' => __DIR__ . '/..' . '/srag/dic/src/DICStatic.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DICStaticInterface' => __DIR__ . '/..' . '/srag/dic/src/DICStaticInterface.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DICTrait' => __DIR__ . '/..' . '/srag/dic/src/DICTrait.php',

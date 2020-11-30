@@ -69,6 +69,7 @@ return array(
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\ViewControlModeUI\\ViewControlModeUI' => $vendorDir . '/srag/custominputguis/src/ViewControlModeUI/ViewControlModeUI.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\Waiter\\Waiter' => $vendorDir . '/srag/custominputguis/src/Waiter/Waiter.php',
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\WeekdayInputGUI\\WeekdayInputGUI' => $vendorDir . '/srag/custominputguis/src/WeekdayInputGUI/WeekdayInputGUI.php',
+    'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Cron\\FixUITemplateInCronContext' => $vendorDir . '/srag/dic/src/Cron/FixUITemplateInCronContext.php',
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DICStatic' => $vendorDir . '/srag/dic/src/DICStatic.php',
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DICStaticInterface' => $vendorDir . '/srag/dic/src/DICStaticInterface.php',
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\DICTrait' => $vendorDir . '/srag/dic/src/DICTrait.php',
