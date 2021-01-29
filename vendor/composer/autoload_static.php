@@ -8,7 +8,6 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
 {
     public static $files = array (
         '2cc946a370add4cf580a13b6418db04a' => __DIR__ . '/..' . '/srag/dic/src/PHPVersionChecker.php',
-        '9a9d5115b9fbc4ca773342c33b60328e' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -143,7 +142,6 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\PdoContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoContextHelper.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
-        'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Ilias7PreWarn' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Output\\Output' => __DIR__ . '/..' . '/srag/dic/src/Output/Output.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Output\\OutputInterface' => __DIR__ . '/..' . '/srag/dic/src/Output/OutputInterface.php',
