@@ -2,6 +2,8 @@
 
 namespace srag\Plugins\SrCrsMemberGalleryRoleColor\Config;
 
+require_once __DIR__ . "/../../vendor/autoload.php";
+
 use ilSrCrsMemberGalleryRoleColorPlugin;
 use ilUtil;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;

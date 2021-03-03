@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\SrCrsMemberGalleryRoleColor\DevTools\DevToolsCtrl;
+use srag\DevTools\SrCrsMemberGalleryRoleColor\DevToolsCtrl;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigCtrl;
 use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTrait;
@@ -12,7 +12,7 @@ use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTr
  *
  * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  *
- * @ilCtrl_isCalledBy srag\DIC\SrCrsMemberGalleryRoleColor\DevTools\DevToolsCtrl: ilSrCrsMemberGalleryRoleColorConfigGUI
+ * @ilCtrl_isCalledBy srag\DevTools\SrCrsMemberGalleryRoleColor\DevToolsCtrl: ilSrCrsMemberGalleryRoleColorConfigGUI
  */
 class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI
 {

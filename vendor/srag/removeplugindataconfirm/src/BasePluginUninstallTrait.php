@@ -4,7 +4,7 @@ namespace srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor;
 
 use ilUIPluginRouterGUI;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
-use srag\DIC\SrCrsMemberGalleryRoleColor\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrCrsMemberGalleryRoleColor\LibraryLanguageInstaller;
 
 /**
  * Trait BasePluginUninstallTrait

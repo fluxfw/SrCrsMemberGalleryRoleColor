@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\CheckboxInputGUI;
+namespace srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\AjaxCheckbox;
 
 use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\Template\Template;
 use srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\Waiter\Waiter;
@@ -9,7 +9,7 @@ use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
 /**
  * Class AjaxCheckbox
  *
- * @package srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\CheckboxInputGUI
+ * @package srag\CustomInputGUIs\SrCrsMemberGalleryRoleColor\AjaxCheckbox
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
