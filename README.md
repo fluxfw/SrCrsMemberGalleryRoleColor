@@ -2,7 +2,7 @@
 
 # SrCrsMemberGalleryRoleColor ILIAS Plugin
 
-
+Colorize ILIAS members view per role
 
 This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
 
