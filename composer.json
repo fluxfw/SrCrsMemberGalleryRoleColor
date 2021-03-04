@@ -67,6 +67,9 @@
       "srag\\LibrariesNamespaceChanger\\PHP72Backport::PHP72Backport",
       "srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginPhpAndXml::generatePluginPhpAndXml",
       "srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginReadme::generatePluginReadme"
+    ],
+    "update-version": [
+      "srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\UpdateVersion::updateVersion"
     ]
   }
 }
