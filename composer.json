@@ -1,7 +1,7 @@
 {
   "name": "srag/srcrsmembergalleryrolecolor",
   "description": "Colorize ILIAS members view per role",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "extra": {
     "ilias_plugin": {
       "id": "srcrsmgrc",
@@ -11,7 +11,7 @@
       "slot": "Services/UIComponent/UserInterfaceHook",
       "supports_cli_setup": true
     },
-    "generate_plugin_readme_template": "SRAG_ILIAS_PLUGIN",
+    "generate_plugin_readme_template": "ILIAS_PLUGIN",
     "long_description_template": "src/LONG_DESCRIPTION.md"
   },
   "type": "project",
@@ -31,9 +31,6 @@
       "role": "Developer"
     }
   ],
-  "support": {
-    "issues": "https://plugins.studer-raimann.ch/goto.php?target=uihk_srsu_PLCRSMEM"
-  },
   "require": {
     "php": ">=7.0",
     "srag/activerecordconfig": ">=0.1.0",
@@ -67,6 +64,9 @@
       "srag\\LibrariesNamespaceChanger\\PHP72Backport::PHP72Backport",
       "srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginPhpAndXml::generatePluginPhpAndXml",
       "srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginReadme::generatePluginReadme"
+    ],
+    "update-version": [
+      "srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\UpdateVersion::updateVersion"
     ]
   }
 }
