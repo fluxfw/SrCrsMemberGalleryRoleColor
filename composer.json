@@ -1,7 +1,7 @@
 {
   "name": "srag/srcrsmembergalleryrolecolor",
   "description": "Colorize ILIAS members view per role",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "extra": {
     "ilias_plugin": {
       "id": "srcrsmgrc",
