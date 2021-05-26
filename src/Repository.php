@@ -11,8 +11,6 @@ use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTr
  * Class Repository
  *
  * @package srag\Plugins\SrCrsMemberGalleryRoleColor
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 final class Repository
 {

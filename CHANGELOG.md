@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.2.6]
+- Update urls
+
 ## [1.2.5]
 - Ignore not supported languages
 

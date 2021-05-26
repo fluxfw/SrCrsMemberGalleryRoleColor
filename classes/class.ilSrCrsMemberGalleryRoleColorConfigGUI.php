@@ -10,8 +10,6 @@ use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTr
 /**
  * Class ilSrCrsMemberGalleryRoleColorConfigGUI
  *
- * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @ilCtrl_isCalledBy srag\DevTools\SrCrsMemberGalleryRoleColor\DevToolsCtrl: ilSrCrsMemberGalleryRoleColorConfigGUI
  */
 class ilSrCrsMemberGalleryRoleColorConfigGUI extends ilPluginConfigGUI

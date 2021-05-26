@@ -8,8 +8,6 @@ use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTr
 
 /**
  * Class ilSrCrsMemberGalleryRoleColorUIHookGUI
- *
- * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 class ilSrCrsMemberGalleryRoleColorUIHookGUI extends ilUIHookPluginGUI
 {

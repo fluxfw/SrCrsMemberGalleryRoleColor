@@ -10,8 +10,6 @@ use srag\DIC\SrCrsMemberGalleryRoleColor\Database\DatabaseInterface;
  * Class AbstractDIC
  *
  * @package srag\DIC\SrCrsMemberGalleryRoleColor\DIC
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 abstract class AbstractDIC implements DICInterface
 {

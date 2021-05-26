@@ -17,8 +17,6 @@ use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
  *
  * @package           srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor
  *
- * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @ilCtrl_isCalledBy srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor\RemovePluginDataConfirmCtrl: ilUIPluginRouterGUI
  */
 class RemovePluginDataConfirmCtrl

@@ -14,8 +14,6 @@ use srag\Plugins\SrCrsMemberGalleryRoleColor\Utils\SrCrsMemberGalleryRoleColorTr
  *
  * @package           srag\Plugins\SrCrsMemberGalleryRoleColor\Config
  *
- * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @ilCtrl_isCalledBy srag\Plugins\SrCrsMemberGalleryRoleColor\Config\ConfigCtrl: ilSrCrsMemberGalleryRoleColorConfigGUI
  */
 class ConfigCtrl
