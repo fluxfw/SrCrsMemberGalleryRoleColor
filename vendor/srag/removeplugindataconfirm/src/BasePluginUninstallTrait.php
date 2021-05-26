@@ -11,8 +11,6 @@ use srag\LibraryLanguageInstaller\SrCrsMemberGalleryRoleColor\LibraryLanguageIns
  *
  * @package srag\RemovePluginDataConfirm\SrCrsMemberGalleryRoleColor
  *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @access  namespace
  */
 trait BasePluginUninstallTrait

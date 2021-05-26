@@ -74,8 +74,6 @@ use srag\DIC\SrCrsMemberGalleryRoleColor\Exception\DICException;
  * Interface DICInterface
  *
  * @package srag\DIC\SrCrsMemberGalleryRoleColor\DIC
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 interface DICInterface
 {

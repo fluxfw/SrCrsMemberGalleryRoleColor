@@ -11,8 +11,6 @@ use srag\DIC\SrCrsMemberGalleryRoleColor\DICTrait;
  * Class Config
  *
  * @package srag\ActiveRecordConfig\SrCrsMemberGalleryRoleColor\Config
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 class Config extends ActiveRecord
 {
