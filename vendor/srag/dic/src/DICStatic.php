@@ -5,7 +5,6 @@ namespace srag\DIC\SrCrsMemberGalleryRoleColor;
 use ilLogLevel;
 use ilPlugin;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DIC\DICInterface;
-use srag\DIC\SrCrsMemberGalleryRoleColor\DIC\Implementation\ILIAS54DIC;
 use srag\DIC\SrCrsMemberGalleryRoleColor\DIC\Implementation\ILIAS60DIC;
 use srag\DIC\SrCrsMemberGalleryRoleColor\Exception\DICException;
 use srag\DIC\SrCrsMemberGalleryRoleColor\Output\Output;
@@ -71,13 +70,8 @@ final class DICStatic implements DICStaticInterface
     {
         if (self::$dic === null) {
             switch (true) {
-                case (self::version()->isLower(VersionInterface::ILIAS_VERSION_5_4)):
-                    throw new DICException("DIC not supports ILIAS " . self::version()->getILIASVersion() . " anymore!");
-                    break;
-
                 case (self::version()->isLower(VersionInterface::ILIAS_VERSION_6)):
-                    global $DIC;
-                    self::$dic = new ILIAS54DIC($DIC);
+                    throw new DICException("DIC not supports ILIAS " . self::version()->getILIASVersion() . " anymore!");
                     break;
 
                 default:
