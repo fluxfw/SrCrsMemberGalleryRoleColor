@@ -110,7 +110,7 @@ class FormBuilder extends AbstractFormBuilder
     /**
      * @inheritDoc
      */
-    protected function storeData(array $data)/* : void*/
+    protected function storeData(array $data) : void
     {
         self::srCrsMemberGalleryRoleColor()->config()->setValue(self::KEY_COLOR_ADMIN_BACKGROUND, strval($data[self::KEY_COLOR_ADMIN_BACKGROUND]));
         self::srCrsMemberGalleryRoleColor()->config()->setValue(self::KEY_COLOR_ADMIN_FONT, strval($data[self::KEY_COLOR_ADMIN_FONT]));
