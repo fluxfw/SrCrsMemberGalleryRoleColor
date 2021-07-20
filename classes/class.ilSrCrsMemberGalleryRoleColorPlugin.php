@@ -69,7 +69,7 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
     /**
      * @inheritDoc
      */
-    public function updateLanguages(/*?array*/ $a_lang_keys = null)/*:void*/
+    public function updateLanguages(/*?array*/ $a_lang_keys = null) : void
     {
         parent::updateLanguages($a_lang_keys);
 
@@ -82,7 +82,7 @@ class ilSrCrsMemberGalleryRoleColorPlugin extends ilUserInterfaceHookPlugin
     /**
      * @inheritDoc
      */
-    protected function deleteData()/*: void*/
+    protected function deleteData() : void
     {
         self::srCrsMemberGalleryRoleColor()->dropTables();
     }
