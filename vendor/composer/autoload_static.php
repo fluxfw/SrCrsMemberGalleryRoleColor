@@ -17,7 +17,6 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
             'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\' => 41,
             'srag\\LibraryLanguageInstaller\\SrCrsMemberGalleryRoleColor\\' => 58,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\' => 59,
             'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\' => 42,
             'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => 37,
             'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => 49,
@@ -41,10 +40,6 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         'srag\\LibrariesNamespaceChanger\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
-        ),
-        'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src',
         ),
         'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\' => 
         array (
@@ -138,9 +133,6 @@ class ComposerStaticInit62b1dd49b035738e9ac00fa6351126dd
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\SrCrsMemberGalleryRoleColor\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/devtools/src/class.DevToolsCtrl.php',
-        'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginPhpAndXml.php',
-        'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginReadme.php',
-        'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\UpdateVersion' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/UpdateVersion.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibraryLanguageInstaller\\SrCrsMemberGalleryRoleColor\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/librarylanguageinstaller/src/LibraryLanguageInstaller.php',
         'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\Config\\ConfigCtrl' => __DIR__ . '/../..' . '/src/Config/class.ConfigCtrl.php',

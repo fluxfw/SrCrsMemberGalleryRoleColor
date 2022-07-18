@@ -10,7 +10,6 @@ return array(
     'srag\\Plugins\\SrCrsMemberGalleryRoleColor\\' => array($baseDir . '/src'),
     'srag\\LibraryLanguageInstaller\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/librarylanguageinstaller/src'),
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
-    'srag\\GeneratePluginInfosHelper\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/generateplugininfoshelper/src'),
     'srag\\DevTools\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/devtools/src'),
     'srag\\DIC\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/dic/src'),
     'srag\\CustomInputGUIs\\SrCrsMemberGalleryRoleColor\\' => array($vendorDir . '/srag/custominputguis/src'),
